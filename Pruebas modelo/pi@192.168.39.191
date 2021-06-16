@@ -1,0 +1,108 @@
+import RPi.GPIO as gpio
+import time
+t_ime=time.time()
+in_time=0
+gpio.setmode(gpio.BCM)
+
+gpio.setup(2,gpio.OUT)  #PWM1D
+gpio.setup(3,gpio.OUT)  #PWM!
+
+gpio.setup(20,gpio.IN) #ENCODERB
+gpio.setup(21,gpio.IN)
+
+Motor1D= gpio.PWM(2,100)
+Motor1Z= gpio.PWM(3,100)
+
+e=0;
+CountA=0
+CountB=0
+Dir=0
+def rigth(PINA1,PINB1):
+    global Pulsos
+    Motor1D.ChangeDutyCycle(PINA1)
+    Motor1Z.ChangeDutyCycle(PINB1)
+
+def left(PINA1,PINB1):
+    Motor1D.ChangeDutyCycle(PINA1)
+    Motor1Z.ChangeDutyCycle(PINB1)
+
+def stop():
+    Motor1D.stop()
+    Motor1Z.stop()
+
+def puto(PINA1,PINB1):
+    gpio.output(PINA1,1)
+    gpio.output(PINB1,1)
+
+def cheDir():
+    global Dir
+    if gpio.input(20) == 1:
+        Dir=-1
+    else:
+        Dir=1
+    
+def CoA(channel):
+    global Dir
+    global CountA
+    global s_ti
+    cheDir()
+    in1_time=s_ti
+    CountA+=Dir
+
+def CoB(channel):
+    global Dir
+    global CountB
+    global s_ti
+    in2_time=s_ti
+    CountB += Dir
+
+def pruba(pulsos):
+    if pulsos ==600:
+        Motor1D.stop()
+        
+
+gpio.add_event_detect(21,gpio.RISING, callback=CoA)
+gpio.add_event_detect(20,gpio.RISING, callback=CoB)
+
+while True:
+    global CountA
+    global CountB
+    global in2_time
+    global in1_time
+    #A=gpio.input(21)
+    #B=gpio.input(20)
+    Motor1D.start(0)
+    #Motor1Z.start(0)
+    Pulsos=CountA+CountB
+    s_ti=time.time()-t_ime
+    ti_pul=in1_time-in2_time
+    rpm_enc= 300/ti_pul     #revoluciones en el encoder p/segundos
+    rpm_mot=rpm_enc*02
+    print('ROM ENCODER: ',rpm_enc,' RPM MOTOR: ',rpm_mot)
+    if Pulsos == 300:
+        Motor1D.stop()
+        #RPM= Pulsos/12*60
+        Pulsos==0        
+    else:
+        
+        rigth(3,0)
+
+    
+    '''if e > 40:
+        
+        print('Izquierda',e,' PulsoA: ',A,'PulsoB: ',B)
+        left(0,3)
+        if e == 60:
+           stop() 
+           e=0   
+           time.sleep(3) 
+    else:    
+        rigth(3,0)         
+        print('Derecha: ',e,' PulsoA: ',A,'PulsoB: ',B)
+        rigth(2,3,80)        '''
+    #rigth(5,0)
+    #print('Derecha: ',e,' PulsoA: ',A,'PulsoB: ',B)
+    #print(Pulsos,' ',RPM)
+    e=e+1
+    time.sleep(0.5)        
+

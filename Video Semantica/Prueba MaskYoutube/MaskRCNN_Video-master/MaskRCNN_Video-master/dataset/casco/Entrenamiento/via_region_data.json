@@ -1,0 +1,6084 @@
+{
+    "frame1.jpg59712": {
+        "fileref": "",
+        "size": 59712,
+        "filename": "frame1.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        438,
+                        0,
+                        6
+                    ],
+                    "all_points_y": [
+                        814,
+                        610,
+                        584,
+                        814
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1912,
+                        1759,
+                        1769,
+                        1406,
+                        1352,
+                        1295,
+                        1253,
+                        1197,
+                        1148,
+                        1188,
+                        1171,
+                        586,
+                        530,
+                        507,
+                        347,
+                        0,
+                        5,
+                        495,
+                        2,
+                        7,
+                        1909,
+                        1912
+                    ],
+                    "all_points_y": [
+                        888,
+                        804,
+                        636,
+                        551,
+                        547,
+                        548,
+                        520,
+                        522,
+                        492,
+                        443,
+                        431,
+                        396,
+                        440,
+                        445,
+                        424,
+                        499,
+                        573,
+                        600,
+                        858,
+                        1079,
+                        1072,
+                        888
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        484,
+                        342,
+                        6,
+                        6,
+                        345,
+                        500,
+                        484
+                    ],
+                    "all_points_y": [
+                        356,
+                        350,
+                        382,
+                        7,
+                        11,
+                        15,
+                        356
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1284,
+                        1320,
+                        1341,
+                        1309,
+                        1284
+                    ],
+                    "all_points_y": [
+                        408,
+                        416,
+                        0,
+                        -1,
+                        408
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        584,
+                        578,
+                        1185,
+                        1208,
+                        584
+                    ],
+                    "all_points_y": [
+                        9,
+                        381,
+                        415,
+                        0,
+                        9
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame3.jpg66287": {
+        "fileref": "",
+        "size": 66287,
+        "filename": "frame3.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        10,
+                        421,
+                        5,
+                        10
+                    ],
+                    "all_points_y": [
+                        808,
+                        608,
+                        588,
+                        808
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        8,
+                        462,
+                        438,
+                        1,
+                        7,
+                        353,
+                        508,
+                        582,
+                        1153,
+                        1179,
+                        1149,
+                        1190,
+                        1259,
+                        1286,
+                        1322,
+                        1398,
+                        1780,
+                        1767,
+                        1762,
+                        1752,
+                        1749,
+                        1912,
+                        8,
+                        8
+                    ],
+                    "all_points_y": [
+                        827,
+                        608,
+                        592,
+                        576,
+                        494,
+                        420,
+                        433,
+                        394,
+                        444,
+                        434,
+                        492,
+                        517,
+                        522,
+                        544,
+                        556,
+                        547,
+                        589,
+                        683,
+                        726,
+                        797,
+                        820,
+                        903,
+                        901,
+                        827
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        490,
+                        346,
+                        4,
+                        6,
+                        340,
+                        497,
+                        490
+                    ],
+                    "all_points_y": [
+                        356,
+                        349,
+                        377,
+                        1,
+                        5,
+                        5,
+                        356
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1312,
+                        1282,
+                        1306,
+                        1339,
+                        1312
+                    ],
+                    "all_points_y": [
+                        415,
+                        407,
+                        6,
+                        8,
+                        415
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        583,
+                        576,
+                        1117,
+                        1136,
+                        583
+                    ],
+                    "all_points_y": [
+                        2,
+                        378,
+                        409,
+                        2,
+                        2
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame4.jpg74331": {
+        "fileref": "",
+        "size": 74331,
+        "filename": "frame4.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        2,
+                        412,
+                        2,
+                        2
+                    ],
+                    "all_points_y": [
+                        807,
+                        613,
+                        584,
+                        807
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        479,
+                        333,
+                        0,
+                        2,
+                        339,
+                        496,
+                        479
+                    ],
+                    "all_points_y": [
+                        353,
+                        353,
+                        380,
+                        4,
+                        4,
+                        5,
+                        353
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1305,
+                        1276,
+                        1303,
+                        1333,
+                        1305
+                    ],
+                    "all_points_y": [
+                        423,
+                        412,
+                        -1,
+                        1,
+                        423
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        579,
+                        571,
+                        1132,
+                        1141,
+                        579
+                    ],
+                    "all_points_y": [
+                        -1,
+                        384,
+                        411,
+                        1,
+                        -1
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        5,
+                        464,
+                        451,
+                        5,
+                        6,
+                        348,
+                        496,
+                        524,
+                        548,
+                        615,
+                        1118,
+                        1171,
+                        1160,
+                        1140,
+                        1146,
+                        1184,
+                        1250,
+                        1284,
+                        1433,
+                        1758,
+                        1767,
+                        1755,
+                        1758,
+                        1890,
+                        1890,
+                        7,
+                        5
+                    ],
+                    "all_points_y": [
+                        850,
+                        610,
+                        594,
+                        572,
+                        496,
+                        420,
+                        436,
+                        429,
+                        415,
+                        398,
+                        432,
+                        434,
+                        467,
+                        481,
+                        503,
+                        530,
+                        529,
+                        555,
+                        561,
+                        603,
+                        644,
+                        802,
+                        839,
+                        920,
+                        1069,
+                        1067,
+                        850
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame9.jpg125340": {
+        "fileref": "",
+        "size": 125340,
+        "filename": "frame9.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1,
+                        404,
+                        4,
+                        1
+                    ],
+                    "all_points_y": [
+                        797,
+                        613,
+                        592,
+                        797
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        477,
+                        337,
+                        2,
+                        4,
+                        334,
+                        489,
+                        477
+                    ],
+                    "all_points_y": [
+                        354,
+                        347,
+                        372,
+                        7,
+                        8,
+                        7,
+                        354
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1312,
+                        1279,
+                        1303,
+                        1337,
+                        1312
+                    ],
+                    "all_points_y": [
+                        426,
+                        414,
+                        1,
+                        2,
+                        426
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1915,
+                        1857,
+                        1897,
+                        1919,
+                        1915
+                    ],
+                    "all_points_y": [
+                        567,
+                        559,
+                        6,
+                        8,
+                        567
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        579,
+                        571,
+                        1116,
+                        1115,
+                        579
+                    ],
+                    "all_points_y": [
+                        4,
+                        385,
+                        410,
+                        -1,
+                        4
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "5": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        4,
+                        487,
+                        203,
+                        4,
+                        5,
+                        1912,
+                        1914,
+                        1767,
+                        1780,
+                        1435,
+                        1388,
+                        1347,
+                        1307,
+                        1282,
+                        1237,
+                        1178,
+                        1142,
+                        1161,
+                        1152,
+                        553,
+                        515,
+                        463,
+                        330,
+                        6,
+                        4
+                    ],
+                    "all_points_y": [
+                        579,
+                        598,
+                        734,
+                        832,
+                        1073,
+                        1069,
+                        903,
+                        823,
+                        610,
+                        571,
+                        553,
+                        563,
+                        558,
+                        554,
+                        522,
+                        525,
+                        495,
+                        448,
+                        421,
+                        396,
+                        425,
+                        438,
+                        423,
+                        502,
+                        579
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame23.jpg132938": {
+        "fileref": "",
+        "size": 132938,
+        "filename": "frame23.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        7,
+                        5,
+                        508,
+                        4,
+                        6,
+                        331,
+                        480,
+                        536,
+                        636,
+                        759,
+                        1171,
+                        1129,
+                        1188,
+                        1253,
+                        1291,
+                        1355,
+                        1438,
+                        1817,
+                        1831,
+                        1814,
+                        1810,
+                        1890,
+                        1894,
+                        7
+                    ],
+                    "all_points_y": [
+                        1070,
+                        841,
+                        606,
+                        579,
+                        489,
+                        415,
+                        436,
+                        402,
+                        403,
+                        404,
+                        429,
+                        500,
+                        537,
+                        534,
+                        561,
+                        572,
+                        566,
+                        611,
+                        644,
+                        839,
+                        865,
+                        910,
+                        1072,
+                        1070
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        11,
+                        389,
+                        0,
+                        11
+                    ],
+                    "all_points_y": [
+                        811,
+                        626,
+                        605,
+                        811
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        471,
+                        314,
+                        5,
+                        7,
+                        327,
+                        480,
+                        471
+                    ],
+                    "all_points_y": [
+                        347,
+                        345,
+                        368,
+                        7,
+                        7,
+                        7,
+                        347
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1319,
+                        1284,
+                        1313,
+                        1347,
+                        1319
+                    ],
+                    "all_points_y": [
+                        422,
+                        418,
+                        2,
+                        4,
+                        422
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        570,
+                        556,
+                        1102,
+                        1111,
+                        570
+                    ],
+                    "all_points_y": [
+                        0,
+                        385,
+                        406,
+                        4,
+                        0
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame34.jpg133090": {
+        "fileref": "",
+        "size": 133090,
+        "filename": "frame34.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        14,
+                        318,
+                        335,
+                        2,
+                        5,
+                        244,
+                        381,
+                        453,
+                        517,
+                        1115,
+                        1077,
+                        1122,
+                        1142,
+                        1194,
+                        1243,
+                        1330,
+                        1834,
+                        1808,
+                        1912,
+                        1915,
+                        10,
+                        14
+                    ],
+                    "all_points_y": [
+                        803,
+                        650,
+                        628,
+                        615,
+                        479,
+                        427,
+                        445,
+                        421,
+                        408,
+                        454,
+                        515,
+                        551,
+                        561,
+                        559,
+                        598,
+                        603,
+                        670,
+                        916,
+                        978,
+                        1071,
+                        1067,
+                        803
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        7,
+                        289,
+                        8,
+                        7
+                    ],
+                    "all_points_y": [
+                        780,
+                        650,
+                        630,
+                        780
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        391,
+                        236,
+                        2,
+                        5,
+                        243,
+                        407,
+                        391
+                    ],
+                    "all_points_y": [
+                        360,
+                        353,
+                        371,
+                        5,
+                        7,
+                        5,
+                        360
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1266,
+                        1230,
+                        1259,
+                        1291,
+                        1266
+                    ],
+                    "all_points_y": [
+                        448,
+                        440,
+                        11,
+                        11,
+                        448
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        496,
+                        485,
+                        1102,
+                        1132,
+                        496,
+                        496
+                    ],
+                    "all_points_y": [
+                        13,
+                        391,
+                        439,
+                        5,
+                        5,
+                        13
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame40.jpg128522": {
+        "fileref": "",
+        "size": 128522,
+        "filename": "frame40.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        7,
+                        369,
+                        2,
+                        2,
+                        249,
+                        399,
+                        447,
+                        510,
+                        1141,
+                        1097,
+                        1093,
+                        1152,
+                        1226,
+                        1262,
+                        1380,
+                        1891,
+                        1890,
+                        7,
+                        7
+                    ],
+                    "all_points_y": [
+                        855,
+                        665,
+                        645,
+                        500,
+                        450,
+                        472,
+                        457,
+                        432,
+                        478,
+                        542,
+                        565,
+                        600,
+                        603,
+                        636,
+                        631,
+                        698,
+                        1067,
+                        1070,
+                        855
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        0,
+                        285,
+                        7,
+                        0
+                    ],
+                    "all_points_y": [
+                        823,
+                        683,
+                        662,
+                        823
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        398,
+                        244,
+                        4,
+                        6,
+                        252,
+                        413,
+                        398
+                    ],
+                    "all_points_y": [
+                        384,
+                        376,
+                        394,
+                        96,
+                        100,
+                        102,
+                        384
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        507,
+                        495,
+                        1133,
+                        1140,
+                        507
+                    ],
+                    "all_points_y": [
+                        98,
+                        423,
+                        466,
+                        96,
+                        98
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1281,
+                        1251,
+                        1281,
+                        1317,
+                        1281
+                    ],
+                    "all_points_y": [
+                        476,
+                        472,
+                        95,
+                        97,
+                        476
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame43.jpg131176": {
+        "fileref": "",
+        "size": 131176,
+        "filename": "frame43.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        7,
+                        10,
+                        368,
+                        1,
+                        7,
+                        236,
+                        395,
+                        492,
+                        1124,
+                        1085,
+                        1143,
+                        1209,
+                        1236,
+                        1285,
+                        1430,
+                        1910,
+                        1913,
+                        7
+                    ],
+                    "all_points_y": [
+                        1068,
+                        845,
+                        665,
+                        650,
+                        502,
+                        457,
+                        477,
+                        438,
+                        488,
+                        559,
+                        596,
+                        598,
+                        620,
+                        639,
+                        648,
+                        720,
+                        1066,
+                        1068
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1,
+                        257,
+                        4,
+                        1
+                    ],
+                    "all_points_y": [
+                        811,
+                        691,
+                        677,
+                        811
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        381,
+                        230,
+                        1,
+                        5,
+                        239,
+                        408,
+                        381
+                    ],
+                    "all_points_y": [
+                        390,
+                        381,
+                        396,
+                        5,
+                        8,
+                        11,
+                        390
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1284,
+                        1322,
+                        1282,
+                        1249,
+                        1284
+                    ],
+                    "all_points_y": [
+                        487,
+                        -1,
+                        2,
+                        481,
+                        487
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        500,
+                        485,
+                        1127,
+                        1152,
+                        500
+                    ],
+                    "all_points_y": [
+                        1,
+                        427,
+                        470,
+                        12,
+                        1
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame44.jpg128366": {
+        "fileref": "",
+        "size": 128366,
+        "filename": "frame44.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1915,
+                        1914,
+                        1397,
+                        1359,
+                        1252,
+                        1205,
+                        1148,
+                        1093,
+                        1132,
+                        495,
+                        430,
+                        360,
+                        235,
+                        0,
+                        3,
+                        375,
+                        6,
+                        9,
+                        1915
+                    ],
+                    "all_points_y": [
+                        1065,
+                        713,
+                        648,
+                        629,
+                        635,
+                        590,
+                        595,
+                        565,
+                        484,
+                        445,
+                        470,
+                        483,
+                        458,
+                        508,
+                        671,
+                        687,
+                        891,
+                        1074,
+                        1065
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        251,
+                        3,
+                        6
+                    ],
+                    "all_points_y": [
+                        819,
+                        699,
+                        690,
+                        819
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        503,
+                        487,
+                        1149,
+                        1188,
+                        503
+                    ],
+                    "all_points_y": [
+                        2,
+                        431,
+                        464,
+                        6,
+                        2
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        388,
+                        234,
+                        6,
+                        8,
+                        246,
+                        410,
+                        388
+                    ],
+                    "all_points_y": [
+                        394,
+                        383,
+                        399,
+                        8,
+                        8,
+                        11,
+                        394
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1288,
+                        1324,
+                        1286,
+                        1250,
+                        1288
+                    ],
+                    "all_points_y": [
+                        489,
+                        5,
+                        11,
+                        481,
+                        489
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame49.jpg111511": {
+        "fileref": "",
+        "size": 111511,
+        "filename": "frame49.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        0,
+                        312,
+                        6,
+                        0
+                    ],
+                    "all_points_y": [
+                        898,
+                        742,
+                        720,
+                        898
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        446,
+                        284,
+                        3,
+                        6,
+                        290,
+                        458,
+                        446
+                    ],
+                    "all_points_y": [
+                        425,
+                        419,
+                        438,
+                        6,
+                        10,
+                        6,
+                        425
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        557,
+                        546,
+                        1198,
+                        1247,
+                        557
+                    ],
+                    "all_points_y": [
+                        5,
+                        465,
+                        509,
+                        11,
+                        5
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1355,
+                        1312,
+                        1340,
+                        1394,
+                        1355
+                    ],
+                    "all_points_y": [
+                        530,
+                        515,
+                        0,
+                        3,
+                        530
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        3,
+                        8,
+                        373,
+                        14,
+                        10,
+                        284,
+                        443,
+                        536,
+                        1183,
+                        1152,
+                        1209,
+                        1274,
+                        1315,
+                        1378,
+                        1450,
+                        1908,
+                        1908,
+                        3
+                    ],
+                    "all_points_y": [
+                        1072,
+                        920,
+                        734,
+                        707,
+                        555,
+                        493,
+                        509,
+                        477,
+                        527,
+                        606,
+                        642,
+                        638,
+                        673,
+                        690,
+                        685,
+                        750,
+                        1067,
+                        1072
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame51.jpg123912": {
+        "fileref": "",
+        "size": 123912,
+        "filename": "frame51.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1911,
+                        3,
+                        8,
+                        329,
+                        363,
+                        347,
+                        5,
+                        9,
+                        315,
+                        452,
+                        497,
+                        587,
+                        1216,
+                        1174,
+                        1235,
+                        1299,
+                        1356,
+                        1429,
+                        1475,
+                        1915,
+                        1911
+                    ],
+                    "all_points_y": [
+                        1068,
+                        1073,
+                        936,
+                        782,
+                        761,
+                        738,
+                        721,
+                        570,
+                        503,
+                        523,
+                        533,
+                        491,
+                        539,
+                        610,
+                        654,
+                        651,
+                        701,
+                        718,
+                        684,
+                        761,
+                        1068
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        304,
+                        6,
+                        6
+                    ],
+                    "all_points_y": [
+                        900,
+                        768,
+                        740,
+                        900
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        455,
+                        304,
+                        6,
+                        8,
+                        315,
+                        481,
+                        455
+                    ],
+                    "all_points_y": [
+                        438,
+                        431,
+                        445,
+                        8,
+                        6,
+                        9,
+                        438
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1336,
+                        1386,
+                        1423,
+                        1375,
+                        1336
+                    ],
+                    "all_points_y": [
+                        529,
+                        542,
+                        5,
+                        12,
+                        529
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        575,
+                        554,
+                        1224,
+                        1269,
+                        575
+                    ],
+                    "all_points_y": [
+                        0,
+                        473,
+                        517,
+                        12,
+                        0
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame74.jpg116870": {
+        "fileref": "",
+        "size": 116870,
+        "filename": "frame74.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        474,
+                        314,
+                        0,
+                        6,
+                        341,
+                        515,
+                        474
+                    ],
+                    "all_points_y": [
+                        490,
+                        479,
+                        506,
+                        5,
+                        10,
+                        13,
+                        490
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1504,
+                        1548,
+                        1489,
+                        1442,
+                        1504
+                    ],
+                    "all_points_y": [
+                        622,
+                        5,
+                        5,
+                        606,
+                        622
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        614,
+                        584,
+                        1328,
+                        1358,
+                        614
+                    ],
+                    "all_points_y": [
+                        5,
+                        531,
+                        571,
+                        8,
+                        5
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        10,
+                        220,
+                        0,
+                        10
+                    ],
+                    "all_points_y": [
+                        1007,
+                        893,
+                        874,
+                        1007
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        10,
+                        284,
+                        6,
+                        6,
+                        319,
+                        457,
+                        525,
+                        563,
+                        1307,
+                        1240,
+                        1302,
+                        1391,
+                        1454,
+                        1640,
+                        1899,
+                        1908,
+                        6
+                    ],
+                    "all_points_y": [
+                        1066,
+                        1031,
+                        882,
+                        860,
+                        622,
+                        568,
+                        588,
+                        582,
+                        552,
+                        595,
+                        680,
+                        736,
+                        747,
+                        795,
+                        825,
+                        861,
+                        1067,
+                        1066
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame101.jpg115882": {
+        "fileref": "",
+        "size": 115882,
+        "filename": "frame101.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1917,
+                        1909,
+                        1794,
+                        1733,
+                        1686,
+                        1549,
+                        1461,
+                        1372,
+                        1283,
+                        1344,
+                        579,
+                        481,
+                        294,
+                        5,
+                        6,
+                        59,
+                        5,
+                        5,
+                        1917
+                    ],
+                    "all_points_y": [
+                        1076,
+                        777,
+                        757,
+                        735,
+                        746,
+                        735,
+                        670,
+                        668,
+                        621,
+                        526,
+                        452,
+                        492,
+                        478,
+                        545,
+                        858,
+                        916,
+                        961,
+                        1068,
+                        1076
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        456,
+                        279,
+                        3,
+                        6,
+                        293,
+                        486,
+                        456
+                    ],
+                    "all_points_y": [
+                        400,
+                        391,
+                        410,
+                        8,
+                        11,
+                        12,
+                        400
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1591,
+                        1609,
+                        1644,
+                        1563,
+                        1526,
+                        1591
+                    ],
+                    "all_points_y": [
+                        533,
+                        517,
+                        12,
+                        3,
+                        519,
+                        533
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        595,
+                        579,
+                        1349,
+                        1375,
+                        595
+                    ],
+                    "all_points_y": [
+                        3,
+                        434,
+                        491,
+                        0,
+                        3
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame104.jpg132741": {
+        "fileref": "",
+        "size": 132741,
+        "filename": "frame104.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        450,
+                        282,
+                        8,
+                        10,
+                        287,
+                        484,
+                        450
+                    ],
+                    "all_points_y": [
+                        370,
+                        358,
+                        379,
+                        3,
+                        6,
+                        8,
+                        370
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1607,
+                        1540,
+                        1578,
+                        1653,
+                        1607
+                    ],
+                    "all_points_y": [
+                        506,
+                        485,
+                        5,
+                        6,
+                        506
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        595,
+                        579,
+                        1296,
+                        1321,
+                        595
+                    ],
+                    "all_points_y": [
+                        2,
+                        416,
+                        449,
+                        0,
+                        2
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        481,
+                        584,
+                        1342,
+                        1294,
+                        1380,
+                        1481,
+                        1586,
+                        1803,
+                        1903,
+                        1908,
+                        8,
+                        16,
+                        298,
+                        481
+                    ],
+                    "all_points_y": [
+                        463,
+                        427,
+                        484,
+                        592,
+                        647,
+                        646,
+                        712,
+                        730,
+                        772,
+                        1067,
+                        1064,
+                        511,
+                        457,
+                        463
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame113.jpg127184": {
+        "fileref": "",
+        "size": 127184,
+        "filename": "frame113.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        9,
+                        1911,
+                        1914,
+                        1847,
+                        1775,
+                        1696,
+                        1652,
+                        1574,
+                        1459,
+                        1380,
+                        1423,
+                        1352,
+                        626,
+                        547,
+                        341,
+                        5,
+                        9
+                    ],
+                    "all_points_y": [
+                        1070,
+                        1070,
+                        769,
+                        768,
+                        780,
+                        763,
+                        760,
+                        682,
+                        688,
+                        631,
+                        529,
+                        508,
+                        461,
+                        498,
+                        476,
+                        539,
+                        1070
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        512,
+                        333,
+                        6,
+                        5,
+                        346,
+                        540,
+                        512
+                    ],
+                    "all_points_y": [
+                        399,
+                        383,
+                        411,
+                        6,
+                        11,
+                        9,
+                        399
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1721,
+                        1637,
+                        1683,
+                        1771,
+                        1721
+                    ],
+                    "all_points_y": [
+                        545,
+                        522,
+                        0,
+                        5,
+                        545
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        656,
+                        640,
+                        1406,
+                        1429,
+                        656
+                    ],
+                    "all_points_y": [
+                        3,
+                        439,
+                        478,
+                        6,
+                        3
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame116.jpg114382": {
+        "fileref": "",
+        "size": 114382,
+        "filename": "frame116.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1911,
+                        1908,
+                        1868,
+                        1761,
+                        1708,
+                        1596,
+                        1499,
+                        1385,
+                        1450,
+                        1407,
+                        636,
+                        550,
+                        508,
+                        331,
+                        3,
+                        11,
+                        1911
+                    ],
+                    "all_points_y": [
+                        1069,
+                        833,
+                        833,
+                        833,
+                        831,
+                        742,
+                        749,
+                        666,
+                        587,
+                        554,
+                        503,
+                        544,
+                        550,
+                        522,
+                        592,
+                        1069,
+                        1069
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        514,
+                        333,
+                        0,
+                        8,
+                        352,
+                        546,
+                        514
+                    ],
+                    "all_points_y": [
+                        449,
+                        438,
+                        457,
+                        10,
+                        10,
+                        8,
+                        449
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1756,
+                        1667,
+                        1715,
+                        1810,
+                        1756
+                    ],
+                    "all_points_y": [
+                        612,
+                        584,
+                        3,
+                        5,
+                        612
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        666,
+                        638,
+                        1432,
+                        1485,
+                        666
+                    ],
+                    "all_points_y": [
+                        2,
+                        482,
+                        539,
+                        5,
+                        2
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame123.jpg114857": {
+        "fileref": "",
+        "size": 114857,
+        "filename": "frame123.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1914,
+                        1904,
+                        1827,
+                        1775,
+                        1621,
+                        1493,
+                        1375,
+                        1280,
+                        1349,
+                        1285,
+                        509,
+                        396,
+                        313,
+                        174,
+                        5,
+                        8,
+                        1914
+                    ],
+                    "all_points_y": [
+                        1064,
+                        972,
+                        951,
+                        983,
+                        965,
+                        866,
+                        863,
+                        793,
+                        691,
+                        659,
+                        584,
+                        624,
+                        645,
+                        617,
+                        646,
+                        1068,
+                        1064
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        352,
+                        164,
+                        6,
+                        8,
+                        198,
+                        410,
+                        352
+                    ],
+                    "all_points_y": [
+                        534,
+                        517,
+                        525,
+                        9,
+                        11,
+                        12,
+                        534
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        534,
+                        500,
+                        1335,
+                        1381,
+                        534
+                    ],
+                    "all_points_y": [
+                        6,
+                        562,
+                        648,
+                        6,
+                        6
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1633,
+                        1736,
+                        1676,
+                        1571,
+                        1633
+                    ],
+                    "all_points_y": [
+                        5,
+                        6,
+                        735,
+                        696,
+                        5
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame124.jpg101521": {
+        "fileref": "",
+        "size": 101521,
+        "filename": "frame124.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1913,
+                        1908,
+                        1841,
+                        1784,
+                        1632,
+                        1508,
+                        1407,
+                        1277,
+                        1329,
+                        1215,
+                        498,
+                        379,
+                        149,
+                        11,
+                        5,
+                        1913
+                    ],
+                    "all_points_y": [
+                        1067,
+                        998,
+                        980,
+                        998,
+                        982,
+                        898,
+                        891,
+                        809,
+                        704,
+                        658,
+                        603,
+                        649,
+                        623,
+                        653,
+                        1066,
+                        1067
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        354,
+                        154,
+                        2,
+                        8,
+                        187,
+                        395,
+                        354
+                    ],
+                    "all_points_y": [
+                        542,
+                        528,
+                        541,
+                        3,
+                        11,
+                        14,
+                        542
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1680,
+                        1569,
+                        1634,
+                        1735,
+                        1680
+                    ],
+                    "all_points_y": [
+                        741,
+                        701,
+                        6,
+                        6,
+                        741
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        522,
+                        477,
+                        1304,
+                        1366,
+                        522
+                    ],
+                    "all_points_y": [
+                        11,
+                        584,
+                        631,
+                        14,
+                        11
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame164.jpg124909": {
+        "fileref": "",
+        "size": 124909,
+        "filename": "frame164.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1912,
+                        1914,
+                        1795,
+                        1598,
+                        1623,
+                        1688,
+                        1629,
+                        1531,
+                        624,
+                        494,
+                        254,
+                        9,
+                        6,
+                        1912
+                    ],
+                    "all_points_y": [
+                        1068,
+                        922,
+                        930,
+                        811,
+                        727,
+                        656,
+                        649,
+                        604,
+                        515,
+                        565,
+                        545,
+                        598,
+                        1071,
+                        1068
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        654,
+                        618,
+                        1568,
+                        1629,
+                        654
+                    ],
+                    "all_points_y": [
+                        0,
+                        503,
+                        587,
+                        14,
+                        0
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1744,
+                        1797,
+                        1679,
+                        1630,
+                        1744
+                    ],
+                    "all_points_y": [
+                        542,
+                        8,
+                        9,
+                        529,
+                        542
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        462,
+                        251,
+                        3,
+                        6,
+                        274,
+                        506,
+                        462
+                    ],
+                    "all_points_y": [
+                        453,
+                        434,
+                        448,
+                        5,
+                        9,
+                        9,
+                        453
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame178.jpg117116": {
+        "fileref": "",
+        "size": 117116,
+        "filename": "frame178.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1841,
+                        1631,
+                        1751,
+                        1583,
+                        1499,
+                        579,
+                        452,
+                        425,
+                        354,
+                        138,
+                        0,
+                        5,
+                        1841
+                    ],
+                    "all_points_y": [
+                        1067,
+                        934,
+                        750,
+                        730,
+                        688,
+                        569,
+                        606,
+                        625,
+                        627,
+                        596,
+                        619,
+                        1072,
+                        1067
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        387,
+                        146,
+                        3,
+                        6,
+                        187,
+                        439,
+                        387
+                    ],
+                    "all_points_y": [
+                        501,
+                        477,
+                        485,
+                        11,
+                        10,
+                        10,
+                        501
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1810,
+                        1626,
+                        1697,
+                        1884,
+                        1810
+                    ],
+                    "all_points_y": [
+                        631,
+                        614,
+                        3,
+                        8,
+                        631
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        604,
+                        555,
+                        1534,
+                        1643,
+                        604
+                    ],
+                    "all_points_y": [
+                        0,
+                        546,
+                        668,
+                        6,
+                        0
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame214.jpg109430": {
+        "fileref": "",
+        "size": 109430,
+        "filename": "frame214.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1909,
+                        1901,
+                        1760,
+                        705,
+                        587,
+                        533,
+                        234,
+                        8,
+                        12,
+                        1909
+                    ],
+                    "all_points_y": [
+                        1070,
+                        715,
+                        666,
+                        529,
+                        564,
+                        603,
+                        561,
+                        609,
+                        1074,
+                        1070
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        512,
+                        241,
+                        6,
+                        6,
+                        276,
+                        564,
+                        512
+                    ],
+                    "all_points_y": [
+                        448,
+                        425,
+                        434,
+                        8,
+                        14,
+                        11,
+                        448
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        761,
+                        723,
+                        1758,
+                        1786,
+                        761
+                    ],
+                    "all_points_y": [
+                        2,
+                        515,
+                        635,
+                        16,
+                        2
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            }
+        }
+    },
+    "frame294.jpg108568": {
+        "fileref": "",
+        "size": 108568,
+        "filename": "frame294.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        17,
+                        952,
+                        990,
+                        1113,
+                        1481,
+                        1494,
+                        1512,
+                        1914,
+                        1914,
+                        6,
+                        17
+                    ],
+                    "all_points_y": [
+                        649,
+                        658,
+                        692,
+                        696,
+                        657,
+                        593,
+                        535,
+                        561,
+                        1069,
+                        1069,
+                        649
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1079,
+                        1362,
+                        1372,
+                        1074,
+                        1079
+                    ],
+                    "all_points_y": [
+                        484,
+                        474,
+                        5,
+                        11,
+                        484
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame373.jpg110740": {
+        "fileref": "",
+        "size": 110740,
+        "filename": "frame373.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1913,
+                        1899,
+                        516,
+                        497,
+                        705,
+                        677,
+                        9,
+                        10,
+                        1913
+                    ],
+                    "all_points_y": [
+                        1060,
+                        777,
+                        657,
+                        627,
+                        576,
+                        562,
+                        623,
+                        1065,
+                        1060
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        23,
+                        709,
+                        682,
+                        5,
+                        23
+                    ],
+                    "all_points_y": [
+                        600,
+                        545,
+                        498,
+                        481,
+                        600
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame500.jpg135668": {
+        "fileref": "",
+        "size": 135668,
+        "filename": "frame500.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1902,
+                        1902,
+                        425,
+                        430,
+                        11,
+                        10,
+                        1902
+                    ],
+                    "all_points_y": [
+                        1060,
+                        753,
+                        809,
+                        882,
+                        879,
+                        1072,
+                        1060
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        430,
+                        1910,
+                        1908,
+                        839,
+                        720,
+                        446,
+                        430
+                    ],
+                    "all_points_y": [
+                        769,
+                        733,
+                        617,
+                        512,
+                        517,
+                        514,
+                        769
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        844,
+                        1180,
+                        1191,
+                        1916,
+                        1914,
+                        1305,
+                        1302,
+                        841,
+                        844
+                    ],
+                    "all_points_y": [
+                        446,
+                        450,
+                        257,
+                        222,
+                        481,
+                        460,
+                        541,
+                        496,
+                        446
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame533.jpg124780": {
+        "fileref": "",
+        "size": 124780,
+        "filename": "frame533.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        28,
+                        369,
+                        377,
+                        1909,
+                        1915,
+                        12,
+                        28
+                    ],
+                    "all_points_y": [
+                        972,
+                        937,
+                        897,
+                        832,
+                        1068,
+                        1062,
+                        972
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        388,
+                        1911,
+                        1901,
+                        898,
+                        425,
+                        433,
+                        399,
+                        388
+                    ],
+                    "all_points_y": [
+                        853,
+                        811,
+                        592,
+                        486,
+                        478,
+                        723,
+                        729,
+                        853
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        922,
+                        1280,
+                        1282,
+                        1908,
+                        1914,
+                        1454,
+                        1447,
+                        917,
+                        922
+                    ],
+                    "all_points_y": [
+                        419,
+                        428,
+                        215,
+                        174,
+                        450,
+                        430,
+                        525,
+                        470,
+                        419
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame573.jpg130127": {
+        "fileref": "",
+        "size": 130127,
+        "filename": "frame573.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1908,
+                        1902,
+                        16,
+                        14,
+                        1908
+                    ],
+                    "all_points_y": [
+                        1069,
+                        750,
+                        1023,
+                        1074,
+                        1069
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        10,
+                        1902,
+                        1887,
+                        338,
+                        13,
+                        10
+                    ],
+                    "all_points_y": [
+                        991,
+                        719,
+                        512,
+                        385,
+                        395,
+                        991
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        409,
+                        406,
+                        1023,
+                        1026,
+                        1910,
+                        1902,
+                        774,
+                        766,
+                        409
+                    ],
+                    "all_points_y": [
+                        309,
+                        376,
+                        422,
+                        316,
+                        341,
+                        5,
+                        76,
+                        301,
+                        309
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame608.jpg120402": {
+        "fileref": "",
+        "size": 120402,
+        "filename": "frame608.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        9,
+                        1233,
+                        1233,
+                        1574,
+                        1593,
+                        1823,
+                        1847,
+                        1906,
+                        1909,
+                        8,
+                        9
+                    ],
+                    "all_points_y": [
+                        1032,
+                        540,
+                        478,
+                        495,
+                        470,
+                        487,
+                        453,
+                        459,
+                        1073,
+                        1071,
+                        1032
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        19,
+                        1145,
+                        1062,
+                        2,
+                        19
+                    ],
+                    "all_points_y": [
+                        973,
+                        537,
+                        497,
+                        427,
+                        973
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1285,
+                        5,
+                        6,
+                        1282,
+                        1406,
+                        1386,
+                        1285
+                    ],
+                    "all_points_y": [
+                        271,
+                        241,
+                        5,
+                        3,
+                        17,
+                        277,
+                        271
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1590,
+                        1774,
+                        1803,
+                        1467,
+                        1481,
+                        1605,
+                        1590
+                    ],
+                    "all_points_y": [
+                        358,
+                        364,
+                        8,
+                        5,
+                        311,
+                        321,
+                        358
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame640.jpg116217": {
+        "fileref": "",
+        "size": 116217,
+        "filename": "frame640.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        78,
+                        500,
+                        441,
+                        528,
+                        849,
+                        914,
+                        925,
+                        1171,
+                        1764,
+                        1913,
+                        1913,
+                        78
+                    ],
+                    "all_points_y": [
+                        1056,
+                        753,
+                        717,
+                        615,
+                        646,
+                        642,
+                        622,
+                        619,
+                        706,
+                        668,
+                        1071,
+                        1056
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        430,
+                        309,
+                        10,
+                        6
+                    ],
+                    "all_points_y": [
+                        1034,
+                        757,
+                        657,
+                        631,
+                        1034
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1104,
+                        914,
+                        914,
+                        798,
+                        809,
+                        666,
+                        668,
+                        1113,
+                        1104
+                    ],
+                    "all_points_y": [
+                        504,
+                        511,
+                        435,
+                        435,
+                        124,
+                        124,
+                        5,
+                        5,
+                        504
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1903,
+                        1746,
+                        1765,
+                        1911,
+                        1903
+                    ],
+                    "all_points_y": [
+                        504,
+                        500,
+                        8,
+                        11,
+                        504
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "4": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1703,
+                        1148,
+                        1171,
+                        1734,
+                        1703
+                    ],
+                    "all_points_y": [
+                        531,
+                        568,
+                        11,
+                        14,
+                        531
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Puerta"
+                }
+            },
+            "5": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1761,
+                        1207,
+                        1623,
+                        1913,
+                        1761
+                    ],
+                    "all_points_y": [
+                        668,
+                        611,
+                        582,
+                        622,
+                        668
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame701.jpg116760": {
+        "fileref": "",
+        "size": 116760,
+        "filename": "frame701.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1909,
+                        1134,
+                        1138,
+                        1131,
+                        1146,
+                        1914,
+                        1909
+                    ],
+                    "all_points_y": [
+                        466,
+                        405,
+                        280,
+                        280,
+                        5,
+                        9,
+                        466
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        382,
+                        79,
+                        92,
+                        8,
+                        9,
+                        396,
+                        382
+                    ],
+                    "all_points_y": [
+                        414,
+                        399,
+                        321,
+                        321,
+                        9,
+                        6,
+                        414
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        61,
+                        450,
+                        470,
+                        1275,
+                        1610,
+                        1904,
+                        1908,
+                        9,
+                        9,
+                        58,
+                        61
+                    ],
+                    "all_points_y": [
+                        553,
+                        578,
+                        565,
+                        687,
+                        579,
+                        606,
+                        1067,
+                        1068,
+                        626,
+                        579,
+                        553
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1272,
+                        486,
+                        919,
+                        1563,
+                        1272
+                    ],
+                    "all_points_y": [
+                        649,
+                        556,
+                        497,
+                        564,
+                        649
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame724.jpg105818": {
+        "fileref": "",
+        "size": 105818,
+        "filename": "frame724.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        8,
+                        11,
+                        167,
+                        1166,
+                        1539,
+                        1910,
+                        1913,
+                        8
+                    ],
+                    "all_points_y": [
+                        1071,
+                        555,
+                        550,
+                        685,
+                        527,
+                        560,
+                        1075,
+                        1071
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        95,
+                        5,
+                        8,
+                        100,
+                        95
+                    ],
+                    "all_points_y": [
+                        362,
+                        358,
+                        10,
+                        11,
+                        362
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        969,
+                        960,
+                        1914,
+                        1907,
+                        969
+                    ],
+                    "all_points_y": [
+                        13,
+                        354,
+                        423,
+                        6,
+                        13
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "3": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        216,
+                        1158,
+                        1431,
+                        779,
+                        216
+                    ],
+                    "all_points_y": [
+                        531,
+                        641,
+                        531,
+                        455,
+                        531
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame736.jpg109248": {
+        "fileref": "",
+        "size": 109248,
+        "filename": "frame736.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        8,
+                        9,
+                        47,
+                        1102,
+                        1401,
+                        1903,
+                        1906,
+                        8
+                    ],
+                    "all_points_y": [
+                        1064,
+                        584,
+                        590,
+                        744,
+                        568,
+                        589,
+                        1059,
+                        1064
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        869,
+                        863,
+                        1909,
+                        1901,
+                        869
+                    ],
+                    "all_points_y": [
+                        14,
+                        375,
+                        452,
+                        12,
+                        14
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1102,
+                        1342,
+                        578,
+                        125,
+                        1102
+                    ],
+                    "all_points_y": [
+                        685,
+                        565,
+                        495,
+                        564,
+                        685
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame772.jpg114778": {
+        "fileref": "",
+        "size": 114778,
+        "filename": "frame772.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        11,
+                        16,
+                        692,
+                        964,
+                        1604,
+                        1619,
+                        1700,
+                        1899,
+                        1907,
+                        11
+                    ],
+                    "all_points_y": [
+                        1058,
+                        977,
+                        1020,
+                        669,
+                        685,
+                        666,
+                        680,
+                        804,
+                        1064,
+                        1058
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        647,
+                        887,
+                        8,
+                        8,
+                        647
+                    ],
+                    "all_points_y": [
+                        964,
+                        682,
+                        663,
+                        923,
+                        964
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1518,
+                        211,
+                        228,
+                        200,
+                        211,
+                        1569,
+                        1518
+                    ],
+                    "all_points_y": [
+                        522,
+                        438,
+                        263,
+                        262,
+                        11,
+                        17,
+                        522
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Pared"
+                }
+            }
+        }
+    },
+    "frame859.jpg147233": {
+        "fileref": "",
+        "size": 147233,
+        "filename": "frame859.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        511,
+                        534,
+                        271,
+                        347,
+                        1619,
+                        1739,
+                        1610,
+                        1510,
+                        1320,
+                        83,
+                        84,
+                        20,
+                        16,
+                        511
+                    ],
+                    "all_points_y": [
+                        1071,
+                        1050,
+                        783,
+                        729,
+                        715,
+                        470,
+                        453,
+                        473,
+                        459,
+                        660,
+                        849,
+                        866,
+                        1073,
+                        1071
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        592,
+                        315,
+                        371,
+                        1593,
+                        1565,
+                        1898,
+                        592
+                    ],
+                    "all_points_y": [
+                        1054,
+                        788,
+                        752,
+                        743,
+                        832,
+                        1039,
+                        1054
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame860.jpg147181": {
+        "fileref": "",
+        "size": 147181,
+        "filename": "frame860.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        558,
+                        1894,
+                        1876,
+                        1553,
+                        1585,
+                        335,
+                        558
+                    ],
+                    "all_points_y": [
+                        1061,
+                        1066,
+                        1015,
+                        849,
+                        753,
+                        793,
+                        1061
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        504,
+                        10,
+                        19,
+                        54,
+                        52,
+                        738,
+                        739,
+                        1301,
+                        1483,
+                        1578,
+                        1708,
+                        1600,
+                        235,
+                        496,
+                        504
+                    ],
+                    "all_points_y": [
+                        1071,
+                        1072,
+                        852,
+                        855,
+                        665,
+                        574,
+                        541,
+                        466,
+                        489,
+                        462,
+                        474,
+                        706,
+                        779,
+                        1063,
+                        1071
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame861.jpg150768": {
+        "fileref": "",
+        "size": 150768,
+        "filename": "frame861.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        5,
+                        458,
+                        230,
+                        235,
+                        1613,
+                        1708,
+                        1576,
+                        1461,
+                        1272,
+                        716,
+                        724,
+                        20,
+                        30,
+                        9,
+                        5
+                    ],
+                    "all_points_y": [
+                        1062,
+                        1068,
+                        828,
+                        772,
+                        693,
+                        491,
+                        472,
+                        501,
+                        476,
+                        553,
+                        575,
+                        676,
+                        872,
+                        927,
+                        1062
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        262,
+                        526,
+                        1883,
+                        1858,
+                        1553,
+                        1585,
+                        273,
+                        262
+                    ],
+                    "all_points_y": [
+                        828,
+                        1062,
+                        1064,
+                        1025,
+                        856,
+                        752,
+                        796,
+                        828
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame862.jpg157766": {
+        "fileref": "",
+        "size": 157766,
+        "filename": "frame862.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        427,
+                        0,
+                        22,
+                        722,
+                        714,
+                        1277,
+                        1485,
+                        1553,
+                        1710,
+                        1607,
+                        205,
+                        427
+                    ],
+                    "all_points_y": [
+                        1071,
+                        1071,
+                        687,
+                        579,
+                        560,
+                        484,
+                        504,
+                        487,
+                        495,
+                        720,
+                        790,
+                        1071
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        270,
+                        527,
+                        1895,
+                        1887,
+                        1554,
+                        1594,
+                        270
+                    ],
+                    "all_points_y": [
+                        820,
+                        1071,
+                        1072,
+                        1052,
+                        874,
+                        769,
+                        820
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame863.jpg158260": {
+        "fileref": "",
+        "size": 158260,
+        "filename": "frame863.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        386,
+                        9,
+                        12,
+                        733,
+                        713,
+                        1280,
+                        1473,
+                        1560,
+                        1721,
+                        1609,
+                        232,
+                        196,
+                        386
+                    ],
+                    "all_points_y": [
+                        1067,
+                        1070,
+                        695,
+                        585,
+                        562,
+                        483,
+                        503,
+                        486,
+                        489,
+                        751,
+                        822,
+                        833,
+                        1067
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        469,
+                        262,
+                        1587,
+                        1559,
+                        1563,
+                        1903,
+                        469
+                    ],
+                    "all_points_y": [
+                        1057,
+                        844,
+                        772,
+                        856,
+                        913,
+                        1071,
+                        1057
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame864.jpg158366": {
+        "fileref": "",
+        "size": 158366,
+        "filename": "frame864.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        385,
+                        190,
+                        217,
+                        1599,
+                        1727,
+                        1543,
+                        1458,
+                        1259,
+                        693,
+                        703,
+                        10,
+                        5,
+                        385
+                    ],
+                    "all_points_y": [
+                        1072,
+                        836,
+                        804,
+                        753,
+                        496,
+                        490,
+                        527,
+                        498,
+                        571,
+                        596,
+                        703,
+                        1072,
+                        1072
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        241,
+                        446,
+                        1876,
+                        1550,
+                        1588,
+                        241
+                    ],
+                    "all_points_y": [
+                        847,
+                        1066,
+                        1069,
+                        891,
+                        779,
+                        847
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame865.jpg159682": {
+        "fileref": "",
+        "size": 159682,
+        "filename": "frame865.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        386,
+                        234,
+                        1579,
+                        1538,
+                        1548,
+                        1836,
+                        386
+                    ],
+                    "all_points_y": [
+                        1059,
+                        855,
+                        793,
+                        889,
+                        908,
+                        1059,
+                        1059
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        324,
+                        162,
+                        182,
+                        1588,
+                        1714,
+                        1690,
+                        1647,
+                        1538,
+                        1448,
+                        1249,
+                        679,
+                        690,
+                        8,
+                        9,
+                        324
+                    ],
+                    "all_points_y": [
+                        1057,
+                        853,
+                        816,
+                        763,
+                        505,
+                        498,
+                        514,
+                        500,
+                        528,
+                        503,
+                        579,
+                        617,
+                        729,
+                        1060,
+                        1057
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame866.jpg159891": {
+        "fileref": "",
+        "size": 159891,
+        "filename": "frame866.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        243,
+                        3,
+                        10,
+                        673,
+                        673,
+                        1240,
+                        1447,
+                        1559,
+                        1686,
+                        1691,
+                        1580,
+                        154,
+                        138,
+                        243
+                    ],
+                    "all_points_y": [
+                        1063,
+                        1067,
+                        709,
+                        609,
+                        582,
+                        504,
+                        528,
+                        504,
+                        515,
+                        546,
+                        784,
+                        833,
+                        874,
+                        1063
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        213,
+                        357,
+                        1781,
+                        1542,
+                        1559,
+                        206,
+                        208,
+                        213
+                    ],
+                    "all_points_y": [
+                        891,
+                        1066,
+                        1069,
+                        915,
+                        801,
+                        849,
+                        899,
+                        891
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame867.jpg156555": {
+        "fileref": "",
+        "size": 156555,
+        "filename": "frame867.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        305,
+                        159,
+                        1581,
+                        1540,
+                        1797,
+                        305
+                    ],
+                    "all_points_y": [
+                        1065,
+                        870,
+                        791,
+                        895,
+                        1071,
+                        1065
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        9,
+                        235,
+                        129,
+                        153,
+                        1590,
+                        1707,
+                        1669,
+                        1624,
+                        1535,
+                        1434,
+                        1236,
+                        656,
+                        676,
+                        9,
+                        9
+                    ],
+                    "all_points_y": [
+                        1064,
+                        1062,
+                        866,
+                        841,
+                        768,
+                        514,
+                        506,
+                        523,
+                        512,
+                        539,
+                        511,
+                        587,
+                        614,
+                        727,
+                        1064
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            }
+        }
+    },
+    "frame868.jpg153417": {
+        "fileref": "",
+        "size": 153417,
+        "filename": "frame868.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        220,
+                        117,
+                        140,
+                        1589,
+                        1715,
+                        1670,
+                        1616,
+                        1510,
+                        1428,
+                        1239,
+                        652,
+                        660,
+                        0,
+                        14,
+                        220
+                    ],
+                    "all_points_y": [
+                        1067,
+                        893,
+                        852,
+                        787,
+                        541,
+                        509,
+                        525,
+                        515,
+                        538,
+                        514,
+                        581,
+                        627,
+                        722,
+                        1072,
+                        1067
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        293,
+                        178,
+                        1585,
+                        1542,
+                        1710,
+                        293
+                    ],
+                    "all_points_y": [
+                        1061,
+                        877,
+                        814,
+                        909,
+                        1055,
+                        1061
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame869.jpg152315": {
+        "fileref": "",
+        "size": 152315,
+        "filename": "frame869.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        227,
+                        114,
+                        1602,
+                        1725,
+                        1651,
+                        1613,
+                        1529,
+                        1434,
+                        1229,
+                        654,
+                        671,
+                        12,
+                        14,
+                        227
+                    ],
+                    "all_points_y": [
+                        1057,
+                        874,
+                        802,
+                        540,
+                        528,
+                        548,
+                        537,
+                        554,
+                        534,
+                        603,
+                        634,
+                        751,
+                        1068,
+                        1057
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        283,
+                        171,
+                        1599,
+                        1537,
+                        1719,
+                        283
+                    ],
+                    "all_points_y": [
+                        1045,
+                        895,
+                        833,
+                        951,
+                        1060,
+                        1045
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1260,
+                        693,
+                        701,
+                        958,
+                        1126,
+                        1274,
+                        1260
+                    ],
+                    "all_points_y": [
+                        422,
+                        416,
+                        11,
+                        11,
+                        47,
+                        142,
+                        422
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame870.jpg155300": {
+        "fileref": "",
+        "size": 155300,
+        "filename": "frame870.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        655,
+                        1263,
+                        1282,
+                        975,
+                        696,
+                        699,
+                        655
+                    ],
+                    "all_points_y": [
+                        443,
+                        447,
+                        149,
+                        2,
+                        5,
+                        408,
+                        443
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        197,
+                        103,
+                        217,
+                        1615,
+                        1745,
+                        1683,
+                        1626,
+                        1527,
+                        1448,
+                        1247,
+                        650,
+                        663,
+                        8,
+                        16,
+                        197
+                    ],
+                    "all_points_y": [
+                        1058,
+                        918,
+                        877,
+                        799,
+                        542,
+                        530,
+                        560,
+                        542,
+                        568,
+                        539,
+                        604,
+                        653,
+                        747,
+                        1064,
+                        1058
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        249,
+                        160,
+                        1618,
+                        1619,
+                        1570,
+                        1710,
+                        249
+                    ],
+                    "all_points_y": [
+                        1061,
+                        922,
+                        828,
+                        877,
+                        963,
+                        1077,
+                        1061
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            }
+        }
+    },
+    "frame871.jpg155608": {
+        "fileref": "",
+        "size": 155608,
+        "filename": "frame871.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        162,
+                        257,
+                        1713,
+                        1577,
+                        1618,
+                        1618,
+                        162
+                    ],
+                    "all_points_y": [
+                        945,
+                        1070,
+                        1071,
+                        967,
+                        911,
+                        847,
+                        945
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        148,
+                        81,
+                        1635,
+                        1756,
+                        1623,
+                        1562,
+                        1487,
+                        1450,
+                        1249,
+                        662,
+                        670,
+                        20,
+                        20,
+                        148
+                    ],
+                    "all_points_y": [
+                        1060,
+                        919,
+                        813,
+                        557,
+                        578,
+                        554,
+                        557,
+                        570,
+                        553,
+                        626,
+                        662,
+                        774,
+                        1067,
+                        1060
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        654,
+                        1271,
+                        1278,
+                        1124,
+                        1123,
+                        965,
+                        693,
+                        695,
+                        654
+                    ],
+                    "all_points_y": [
+                        444,
+                        447,
+                        154,
+                        70,
+                        178,
+                        8,
+                        5,
+                        414,
+                        444
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame882.jpg160762": {
+        "fileref": "",
+        "size": 160762,
+        "filename": "frame882.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1613,
+                        1613,
+                        1613,
+                        1677,
+                        22,
+                        21,
+                        1613
+                    ],
+                    "all_points_y": [
+                        1056,
+                        1037,
+                        1037,
+                        910,
+                        1025,
+                        1072,
+                        1056
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        11,
+                        1665,
+                        1815,
+                        1662,
+                        1646,
+                        1494,
+                        1397,
+                        1207,
+                        607,
+                        612,
+                        14,
+                        11
+                    ],
+                    "all_points_y": [
+                        1002,
+                        893,
+                        571,
+                        574,
+                        595,
+                        579,
+                        595,
+                        576,
+                        673,
+                        701,
+                        807,
+                        1002
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        603,
+                        1236,
+                        1253,
+                        933,
+                        929,
+                        644,
+                        641,
+                        603
+                    ],
+                    "all_points_y": [
+                        479,
+                        481,
+                        176,
+                        103,
+                        5,
+                        5,
+                        436,
+                        479
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame907.jpg155145": {
+        "fileref": "",
+        "size": 155145,
+        "filename": "frame907.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1649,
+                        1632,
+                        1753,
+                        1626,
+                        1585,
+                        1470,
+                        1386,
+                        1185,
+                        570,
+                        590,
+                        8,
+                        9,
+                        1649
+                    ],
+                    "all_points_y": [
+                        1054,
+                        976,
+                        690,
+                        690,
+                        707,
+                        691,
+                        715,
+                        707,
+                        819,
+                        864,
+                        1004,
+                        1076,
+                        1054
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        561,
+                        1202,
+                        1197,
+                        1037,
+                        1059,
+                        585,
+                        612,
+                        561
+                    ],
+                    "all_points_y": [
+                        642,
+                        612,
+                        318,
+                        252,
+                        5,
+                        8,
+                        593,
+                        642
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame971.jpg180751": {
+        "fileref": "",
+        "size": 180751,
+        "filename": "frame971.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        59,
+                        11,
+                        1664,
+                        1672,
+                        1631,
+                        1596,
+                        1897,
+                        59
+                    ],
+                    "all_points_y": [
+                        1066,
+                        864,
+                        720,
+                        782,
+                        809,
+                        880,
+                        1069,
+                        1066
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Tapete"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        13,
+                        1678,
+                        1805,
+                        1694,
+                        1638,
+                        1610,
+                        1500,
+                        1410,
+                        1183,
+                        577,
+                        584,
+                        17,
+                        13
+                    ],
+                    "all_points_y": [
+                        828,
+                        688,
+                        406,
+                        387,
+                        395,
+                        420,
+                        401,
+                        423,
+                        414,
+                        512,
+                        539,
+                        661,
+                        828
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "2": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        566,
+                        1223,
+                        1228,
+                        603,
+                        617,
+                        566
+                    ],
+                    "all_points_y": [
+                        314,
+                        309,
+                        11,
+                        3,
+                        276,
+                        314
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1031.jpg120098": {
+        "fileref": "",
+        "size": 120098,
+        "filename": "frame1031.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1892,
+                        1906,
+                        1794,
+                        1705,
+                        1414,
+                        1389,
+                        1257,
+                        1171,
+                        933,
+                        111,
+                        117,
+                        3,
+                        3,
+                        1514,
+                        1892
+                    ],
+                    "all_points_y": [
+                        965,
+                        399,
+                        358,
+                        287,
+                        271,
+                        277,
+                        273,
+                        322,
+                        288,
+                        456,
+                        514,
+                        562,
+                        1068,
+                        1062,
+                        965
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        106,
+                        972,
+                        981,
+                        146,
+                        148,
+                        92,
+                        106
+                    ],
+                    "all_points_y": [
+                        178,
+                        178,
+                        3,
+                        8,
+                        98,
+                        149,
+                        178
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1072.jpg121227": {
+        "fileref": "",
+        "size": 121227,
+        "filename": "frame1072.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1899,
+                        1902,
+                        1791,
+                        1546,
+                        1386,
+                        1244,
+                        1182,
+                        877,
+                        13,
+                        13,
+                        1899
+                    ],
+                    "all_points_y": [
+                        1063,
+                        465,
+                        385,
+                        358,
+                        374,
+                        373,
+                        406,
+                        393,
+                        639,
+                        1074,
+                        1063
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        925,
+                        939,
+                        5,
+                        6
+                    ],
+                    "all_points_y": [
+                        292,
+                        251,
+                        0,
+                        8,
+                        292
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1107.jpg128163": {
+        "fileref": "",
+        "size": 128163,
+        "filename": "frame1107.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1914,
+                        1909,
+                        1809,
+                        1805,
+                        1756,
+                        1749,
+                        1498,
+                        1391,
+                        1141,
+                        1084,
+                        744,
+                        8,
+                        3,
+                        1914
+                    ],
+                    "all_points_y": [
+                        1070,
+                        455,
+                        447,
+                        420,
+                        416,
+                        397,
+                        386,
+                        386,
+                        380,
+                        444,
+                        425,
+                        646,
+                        1071,
+                        1070
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        788,
+                        3,
+                        6,
+                        793,
+                        788
+                    ],
+                    "all_points_y": [
+                        263,
+                        304,
+                        6,
+                        2,
+                        263
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1133.jpg133420": {
+        "fileref": "",
+        "size": 133420,
+        "filename": "frame1133.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1908,
+                        1910,
+                        1883,
+                        1851,
+                        1764,
+                        1756,
+                        1673,
+                        1643,
+                        1497,
+                        1488,
+                        1426,
+                        1407,
+                        1142,
+                        960,
+                        968,
+                        785,
+                        714,
+                        301,
+                        10,
+                        10,
+                        1908
+                    ],
+                    "all_points_y": [
+                        1058,
+                        638,
+                        617,
+                        655,
+                        646,
+                        619,
+                        615,
+                        582,
+                        566,
+                        536,
+                        522,
+                        503,
+                        481,
+                        468,
+                        498,
+                        481,
+                        554,
+                        538,
+                        677,
+                        1064,
+                        1058
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        8,
+                        379,
+                        381,
+                        6,
+                        8
+                    ],
+                    "all_points_y": [
+                        374,
+                        363,
+                        10,
+                        14,
+                        374
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1135.jpg123252": {
+        "fileref": "",
+        "size": 123252,
+        "filename": "frame1135.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1911,
+                        1912,
+                        1873,
+                        1828,
+                        1756,
+                        1732,
+                        1640,
+                        1627,
+                        1462,
+                        1462,
+                        1403,
+                        1397,
+                        1137,
+                        1124,
+                        984,
+                        744,
+                        676,
+                        273,
+                        5,
+                        8,
+                        1911
+                    ],
+                    "all_points_y": [
+                        1065,
+                        628,
+                        642,
+                        654,
+                        631,
+                        601,
+                        603,
+                        573,
+                        554,
+                        531,
+                        519,
+                        505,
+                        491,
+                        473,
+                        476,
+                        473,
+                        548,
+                        534,
+                        652,
+                        1068,
+                        1065
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        5,
+                        336,
+                        335,
+                        2,
+                        5
+                    ],
+                    "all_points_y": [
+                        372,
+                        366,
+                        5,
+                        11,
+                        372
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1160.jpg128661": {
+        "fileref": "",
+        "size": 128661,
+        "filename": "frame1160.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1905,
+                        1902,
+                        1826,
+                        1827,
+                        1624,
+                        1602,
+                        1496,
+                        1505,
+                        1215,
+                        1194,
+                        761,
+                        682,
+                        209,
+                        3,
+                        6,
+                        1905
+                    ],
+                    "all_points_y": [
+                        1060,
+                        711,
+                        669,
+                        641,
+                        627,
+                        577,
+                        561,
+                        538,
+                        519,
+                        500,
+                        490,
+                        596,
+                        577,
+                        653,
+                        1075,
+                        1060
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        8,
+                        279,
+                        284,
+                        5,
+                        8
+                    ],
+                    "all_points_y": [
+                        382,
+                        373,
+                        11,
+                        8,
+                        382
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1189.jpg115783": {
+        "fileref": "",
+        "size": 115783,
+        "filename": "frame1189.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1908,
+                        1908,
+                        1811,
+                        1769,
+                        1766,
+                        1647,
+                        1627,
+                        1278,
+                        1244,
+                        791,
+                        690,
+                        134,
+                        11,
+                        5,
+                        1908
+                    ],
+                    "all_points_y": [
+                        1059,
+                        573,
+                        565,
+                        547,
+                        515,
+                        492,
+                        452,
+                        433,
+                        411,
+                        396,
+                        553,
+                        536,
+                        587,
+                        1062,
+                        1059
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        0,
+                        207,
+                        201,
+                        5,
+                        0
+                    ],
+                    "all_points_y": [
+                        304,
+                        291,
+                        5,
+                        6,
+                        304
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1190.jpg122059": {
+        "fileref": "",
+        "size": 122059,
+        "filename": "frame1190.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1910,
+                        1913,
+                        1776,
+                        1773,
+                        1642,
+                        1637,
+                        1288,
+                        1251,
+                        799,
+                        687,
+                        128,
+                        8,
+                        6,
+                        1910
+                    ],
+                    "all_points_y": [
+                        1072,
+                        584,
+                        558,
+                        515,
+                        503,
+                        469,
+                        447,
+                        422,
+                        416,
+                        565,
+                        542,
+                        600,
+                        1069,
+                        1072
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        2,
+                        208,
+                        203,
+                        8,
+                        2
+                    ],
+                    "all_points_y": [
+                        305,
+                        298,
+                        8,
+                        13,
+                        305
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1191.jpg122842": {
+        "fileref": "",
+        "size": 122842,
+        "filename": "frame1191.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1912,
+                        1912,
+                        1781,
+                        1780,
+                        1643,
+                        1637,
+                        1289,
+                        1233,
+                        807,
+                        704,
+                        126,
+                        11,
+                        9,
+                        1912
+                    ],
+                    "all_points_y": [
+                        1067,
+                        581,
+                        556,
+                        515,
+                        501,
+                        461,
+                        448,
+                        424,
+                        405,
+                        556,
+                        551,
+                        604,
+                        1073,
+                        1067
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        6,
+                        204,
+                        196,
+                        6,
+                        6
+                    ],
+                    "all_points_y": [
+                        302,
+                        293,
+                        12,
+                        3,
+                        302
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    },
+    "frame1192.jpg130121": {
+        "fileref": "",
+        "size": 130121,
+        "filename": "frame1192.jpg",
+        "base64_img_data": "",
+        "file_attributes": {},
+        "regions": {
+            "0": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        1900,
+                        1908,
+                        1799,
+                        1772,
+                        1640,
+                        1637,
+                        1329,
+                        1266,
+                        809,
+                        704,
+                        135,
+                        8,
+                        8,
+                        1900
+                    ],
+                    "all_points_y": [
+                        1060,
+                        581,
+                        573,
+                        512,
+                        511,
+                        466,
+                        468,
+                        428,
+                        401,
+                        563,
+                        555,
+                        614,
+                        1074,
+                        1060
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Floor"
+                }
+            },
+            "1": {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        13,
+                        203,
+                        195,
+                        10,
+                        13
+                    ],
+                    "all_points_y": [
+                        306,
+                        300,
+                        3,
+                        2,
+                        306
+                    ]
+                },
+                "region_attributes": {
+                    "Objeto": "Mueble"
+                }
+            }
+        }
+    }
+}
