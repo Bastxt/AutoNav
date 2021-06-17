@@ -12,7 +12,6 @@ from mrcnn import model as modellib
 model_filename = "mask_rcnn_object_0020.h5"
 #clases correspondientes a modelo
 class_names = ['BG','root']
-
 min_confidence = 0.6
 
 # Metodo de entrada
@@ -150,6 +149,7 @@ while True:
              
             # Obtener capa detectada
             mask = masks[:, :, i]
+            #imagen base(lienzo)
             image = np.zeros((480, 640, 3), np.uint8)
 
 
@@ -172,7 +172,13 @@ while True:
             gray_image = cv2.cvtColor(image.astype(np.uint8), cv2.COLOR_BGR2GRAY)
             # convert the grayscale image to binary image
             ret,thresh = cv2.threshold(gray_image,0,255,0)
-            
+
+
+            #recorrido de matriz pxp
+            for y in range(len(thresh)):
+                for x in range(len(thresh[1,:])):
+                    print('y: ',y, 'x: ',x,'Value: ',thresh[y,x])
+
             # calcular momentos 
             M = cv2.moments(thresh)
             
@@ -180,6 +186,7 @@ while True:
             cX = int(M["m10"] / M["m00"])
             cY = int(M["m01"] / M["m00"])        
                 
+
             # normalizacion de capa a formato uint8
             frame_obj=masked_image.astype(np.uint8)
             #obtener contenedores de secciones detectadas
