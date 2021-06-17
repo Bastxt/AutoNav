@@ -4,6 +4,7 @@ import numpy as np
 import random
 import colorsys
 import cv2
+import imutils
 
 from mrcnn.config import Config
 from mrcnn import model as modellib
@@ -78,7 +79,7 @@ model_path = os.path.join('logs', model_filename)
 #model_path = model.find_last()
 
 # Cargar pesos de modelo .h5 pre-entrenado
-assert model_path != "", "Provide path to trained weights"
+assert model_path != "", "Archivo no encontrado"
 #print("Loading weights from ", model_path)
 model.load_weights(model_path, by_name=True)
 
@@ -87,7 +88,7 @@ model.load_weights(model_path, by_name=True)
 #Ciclo de ejecucion para entrada de video
 
 #Ciclo de ejecucion B
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
 #camera = cv2.VideoCapture("v001.mp4")
 if not cap.isOpened():
     print("Cannot open camera")
@@ -98,7 +99,7 @@ while True:
     
     # verificacion de lectura de frame, si ret es true (ok)
     if not ret:
-        print("Can't receive frame (stream end?). Exiting ...")
+        print("Error frame...")
         break
     
     # pos-proceso frame a frame
@@ -171,13 +172,37 @@ while True:
             #Obtener Centroide
             gray_image = cv2.cvtColor(image.astype(np.uint8), cv2.COLOR_BGR2GRAY)
             # convert the grayscale image to binary image
-            ret,thresh = cv2.threshold(gray_image,0,255,0)
+            ret,thresh = cv2.threshold(gray_image.astype(np.uint8),0,255,0)
+            
+            
+            # find contours in thresholded image, then grab the largest
+            # one
+            cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
+                cv2.CHAIN_APPROX_SIMPLE)
+            #img, contours, hierarchy = cv2.findContours(imageCanny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            cnts = imutils.grab_contours(cnts)
+            c = max(cnts, key=cv2.contourArea)
+
+            cv2.drawContours(image, [c], -1, (0, 255, 255), 2)
+            
 
 
             #recorrido de matriz pxp
-            for y in range(len(thresh)):
-                for x in range(len(thresh[1,:])):
-                    print('y: ',y, 'x: ',x,'Value: ',thresh[y,x])
+            for y in range(len(c)):
+                
+                print('tamaño: ',len(c[y,:]))
+                ext = tuple(c[y][0])
+                print(c[y][0])
+                cv2.circle(image, ext, 3, (0, 0, 255), -1)  
+            #for x in range(len(c[1,:])):
+            #    print('y: ',y, 'x: ',x,'Value: ',thresh[y,x])
+
+
+
+            #extA = tuple(c[0,:][0])
+            #extB = tuple(c[2,:][0])
+            #extC = tuple(c[3,:][0])
+            #extD = tuple(c[4,:][0])
 
             # calcular momentos 
             M = cv2.moments(thresh)
@@ -210,9 +235,9 @@ while True:
             
 
     if N>0:
-        cv2.imshow('frame', frame_obj)
+        cv2.imshow('frame', image)
     else:
-        cv2.imshow('frame', frame)
+        cv2.imshow('frame', image)
     
 
     if cv2.waitKey(1) == ord('q'):
