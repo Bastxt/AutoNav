@@ -10,9 +10,10 @@ from mrcnn.config import Config
 from mrcnn import model as modellib
 
 #modelo pre-entrenado
-model_filename = "mask_rcnn_object_0020.h5"
+model_filename = "mask_rcnn_red_0080.h5"
 #clases correspondientes a modelo
-class_names = ['BG','root']
+#class_names = ['BG','root']
+class_names = ['BG','Floor']
 min_confidence = 0.6
 
 # Metodo de entrada
@@ -88,8 +89,9 @@ model.load_weights(model_path, by_name=True)
 #Ciclo de ejecucion para entrada de video
 
 #Ciclo de ejecucion B
-cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
-#camera = cv2.VideoCapture("v001.mp4")
+#cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
+cap = cv2.VideoCapture('Mapeo2.mp4')
+#camera = cv2.VideoCapture("v001.mpexit()4")
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
@@ -137,9 +139,10 @@ while True:
         score = scores[i] if scores is not None else None   # Separar Score
         label = class_names[class_id]                       # Separar nombre de clase
 
-        if label =='root':
+        #if label =='root':
+        if label =='Floor':
             # Identificar Label
-            print ( label,'root', class_id, 'class_ids')
+            #print ( label,'Floor', class_id, 'class_ids')
 
             #capturar frame en codificacion requerida
             masked_image = frame.astype(np.uint32).copy()
@@ -183,17 +186,7 @@ while True:
             cnts = imutils.grab_contours(cnts)
             c = max(cnts, key=cv2.contourArea)
 
-            cv2.drawContours(image, [c], -1, (0, 255, 255), 2)
-            
-
-
-            #recorrido de matriz pxp
-            for y in range(len(c)):
-                
-                print('tamaño: ',len(c[y,:]))
-                ext = tuple(c[y][0])
-                print(c[y][0])
-                cv2.circle(image, ext, 3, (0, 0, 255), -1)  
+            #cv2.drawContours(image, [c], -1, (0, 255, 255), 2)           
             #for x in range(len(c[1,:])):
             #    print('y: ',y, 'x: ',x,'Value: ',thresh[y,x])
 
@@ -228,16 +221,23 @@ while True:
             # Agregar Marca de centroide
             cv2.circle(frame_obj, (cX, cY), 5, (139,0,0), -1)
             cv2.putText(frame_obj, "centroid", (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-
+            #cv2.drawContours(frame_obj, [c], -1, (0, 255, 255), 2)
+             #recorrido de matriz pxp
+            for y in range(len(c)):
+                ext = tuple(c[y][0])
+                #print('tamaño: ',len(c[y,:]))
+                if ext[1]<cY:               
+                    cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                    cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) #Trazar posible linea entre el punto del controno y el centroide
 
             # depurar binarizacion
             #cv2.imshow('frame', thresh)   
             
 
     if N>0:
-        cv2.imshow('frame', image)
+        cv2.imshow('frame', frame_obj)
     else:
-        cv2.imshow('frame', image)
+        cv2.imshow('frame', frame_obj)
     
 
     if cv2.waitKey(1) == ord('q'):
