@@ -36,24 +36,32 @@ def pre_proceso(wI,wD,r,b):
     vI = wI*r #velocidad motor izq
     vD = wD*r #velocidad motor Der
     V = (vD+vI)/2 #velocidad lineal
-    
     w = (wD-wI)/b #velocidad angular
     theta = w*r #angulo de aplicacion
 
     return [V,w,theta]
 
 
-def modeloInv(xk,yk,thetak,theta_k,Ts,r,b):
+def modeloInv(xk,yk,thetak,Ts,r,b):
 
+    #Cinematica directa
+    #|  xK      |       #|  (r*(np.cos(theta_k))/2)       (r*(np.cos(theta_k))/2)   |       #|  wD   |
+    #|  yK      |   =   #|  (r*(np.sin(theta_k)/2))       (r*(np.sin(theta_k))/2)   |   *   #|  wI   |
+    #|  thetaK  |       #|  (r/b)                         (-r/b)                  |
+
+    #Cinematica inversa
+    #|  wD      |       #|  (r*(np.cos(theta_k))/2)       (r*(np.sin(theta_k)/2))       (r/b)   |       #|  xk      |
+    #|  wI      |   =   #|  (r*(np.cos(theta_k))/2)       (r*(np.sin(theta_k))/2)       (-r/b)  |   *   #|  yk      |
+                                                                                                        #|  thetak  |
     #Obtener pseudoinversa de matriz de transformacion
-    B = np.matrix([[(r*(np.cos(theta_k))/2),(r*(np.sin(theta_k)/2)),(r/b)],[(r*(np.cos(theta_k))/2),(r*(np.sin(theta_k)/2)),-(r/b)]])
+    B = np.matrix([[(r*(np.cos(thetak))/2),(r*(np.sin(thetak)/2)),(r/b)],[(r*(np.cos(thetak))/2),(r*(np.sin(thetak)/2)),-(r/b)]])
     U = np.matrix([[xk],[yk],[thetak]])
 
     #se obtiene un vector compuesto por [posicion x, posicion y, Theta]
     return (B*U) #[wD,wI]
 
 
-def modelo(xk,yk,tk,wD,wI,theta_k,Ts,r,b):
+def modelo(wD,wI,theta_k,Ts,r,b):
     #Relacionando solo velocidad angular, velocidad xlineal y algulo de aplicacion
     #A = np.matrix([[np.cos(theta),0],[np.sin(theta),0],[0,1]])
     #B = np.matrix([[v],[w]])
@@ -72,6 +80,7 @@ def modelo(xk,yk,tk,wD,wI,theta_k,Ts,r,b):
     #|  Vk   |
     #|  wK   |
 
+
     #Se requiere dejar en termino de velocidades angulares wIzq - wDer
     #Velocidad Lineal
     #v = r*((vDer+vIzq)/2)
@@ -84,22 +93,11 @@ def modelo(xk,yk,tk,wD,wI,theta_k,Ts,r,b):
     #|  yK      |   =   #|  (r*(np.sin(theta_k)/2))       (r*(np.sin(theta_k))/2)   |   *   #|  wI   |
     #|  thetaK  |       #|  (r/b)                         (-r/b)                  |
 
-        #agrupando de obtiene
-    #|  xK      |       #|  (r*(np.cos(theta_k))/2)       (r*(np.cos(theta_k))/2)   |       #|  wD   |
-    #|  yK      |   =   #|  (r*(np.sin(theta_k)/2))       (r*(np.sin(theta_k))/2)   |   *   #|  wI   |
-    #|  thetaK  |       #|  (r/b)                         (-r/b)                  |
 
-
-    #Valores anteriores para integracion numerica
-    Fk = np.matrix([[xk],[yk],[tk]])
+    #Fk = np.matrix([[xk],[yk],[thetak]])
     
-    #x = x(k-1)+Dx 
-    #y = y(k-1)+Dy
-    #t = t(k-1)+Dt
-    
-    #B = np.matrix([[Ts*np.cos(theta_k),0],[Ts*np.sin(theta_k),0],[0,Ts]])
     B = np.matrix([[(r*(np.cos(theta_k))/2),(r*(np.cos(theta_k))/2)],[(r*(np.sin(theta_k)/2)),(r*(np.sin(theta_k)/2))],[(r/b),(-r/b)]])
 
-    U = np.matrix([[wD],[wI]]) #valores medidos por sensores
-    #se obtiene un vector compuesto por [posicion x, posicion y,s Theta]
-    return Fk+(B*U) #[x,y,theta]
+    U = np.matrix([[wD],[wI]])
+    #se obtiene un vector compuesto por [posicion x, posicion y, Theta]
+    return (B*U) #[x,y,theta]
