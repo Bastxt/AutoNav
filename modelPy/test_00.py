@@ -1,3 +1,4 @@
+from typing import Dict
 from scipy import signal
 import numpy as np
 from scipy.integrate import odeint
@@ -10,7 +11,9 @@ from numpy.linalg import norm
 ##Definicion de Parametros iniciales para vehiculo diferencial
 b = 19.5 #[mm]
 r = 1.2  #[mm]
+ts = 0.5
 
+t = np.arange(0, 1000, 0.5)
 Ty = np.zeros((3,1))
 Tk = np.zeros((3,1))
 
@@ -41,19 +44,14 @@ Fx = np.array([0.1])
 
 #generacion de señales para motores
 def MotorSignalTrayectoria():
-
-    #primera prueba velocidades Angulares iguales 
-    #tercera prueba velocidades distintas (trayectoria circular a la izq)
-    #prueba 4 trayectoria circular a la der
-    #prueba 5 trayectoria irregular
+    global t
     #señal de velocidad motor derecho
-    #el sobre pico genera una espiral para luego estabilizarse con velocidades diferentes
-    wD = signal.lti([8], [1.0, 1.0])
-    tmD, wDs = signal.step(wD,0)
+    wD = signal.lti([9.5], [1.0, 1.0])
+    tmD, wDs = signal.step(wD,T=t)
 
     #Señal de velocidad motor izquierdo
-    wI = signal.lti([8], [1.0, 1.0, 1.0])
-    tmI, wIs = signal.step(wI,0)
+    wI = signal.lti([10], [1.0, 1.0])
+    tmI, wIs = signal.step(wI,T=t)
     
     return tmI,wIs,tmD,wDs
 
@@ -66,10 +64,8 @@ def MotorSignalTrayectoria():
 
 
 #generar Trayectoria deseada en base a señales establecidas
-def TrajectoryPoints():
-    global r,b    
-
-    
+def TrajectoryPoints(wI,wD):
+    global r,b        
     #Variables necesarias para modelo
     Ix = np.array([0.1])
     Iy = np.array([0.1])
@@ -86,10 +82,8 @@ def TrajectoryPoints():
     #orientacion inicial
     It[0] = 90*(np.pi/180)
 
-    tI,wI,tD,wD = MotorSignalTrayectoria()
-
     #salidas del modelo integradas
-    for x in range(tI.__len__()):
+    for x in range(wI.__len__()):
         resModel = fn.modelo(wD[x],wI[x],It[x],0.5,r,b)
         Ix = np.append(Ix,[resModel[0]+Ix[x-1]])
         Iy = np.append(Iy,[resModel[1]+Iy[x-1]])
@@ -100,35 +94,80 @@ def TrajectoryPoints():
         Dt = np.append(Dt,[resModel[2]])
     return Ix,Iy,It,Dx,Dy,Dt
 
-def Tracking():
+def Tracking(Dx,Dy):
     global r,b    
-    x,y,t,Dx,Dy,Dt =TrajectoryPoints()
-    tI,wI,tD,wD = MotorSignalTrayectoria()
-    
+        
     #Variables necesarias para modelo
-    tIwd = np.array([0.1])
-    tIwi = np.array([0.1])
-
     tDwd = np.array([0.1])
     tDwi = np.array([0.1])
+
+    Ox = np.array([0.1])
+    Oy = np.array([0.1])
+    Ot = np.array([0.1])
+
+    theta = np.array([0.1])
     
     #posicion inicial
-    tIwd[0] = 0
-    tIwi[0] = 0
+    tDwd[0] = 0
+    tDwi[0] = 0
+    theta[0] = 90*(np.pi/180)
 
      #Ejecucion de modelo inverso para seguimiento
     #==============================================================================    
-    for x in range(tI.__len__()):
+    for x in range(Dx.__len__()):
         #modelo inverso para seguimiento de trayectoria
-        modelInv = fn.modeloInv(Dx[x],Dy[x],Dt[x],0.5,r,b)
-        tIwd = np.append(tIwd,[modelInv[0]+tIwd[x-1]])
-        tIwi = np.append(tIwi,[modelInv[1]+tIwi[x-1]])
+        #obtenemos velocidades angulares mediante cinemcatica inversa
+        modelInv = fn.modeloInv(Dx[x]-Ox[x],Dy[x]-Oy[x],Dt[x]-Ot[x]s,0.5,r,b)
 
         tDwd = np.append(tDwd,[modelInv[0]])
-        tDwi = np.append(tDwi,[modelInv[1]])
+        tDwi = np.append(tDwi,[modelInv[1]])   
 
-    return tIwd,tIwi,tDwd,tDwi
+        #ejecutamos posible ruta de ejecucion
+        model = fn.modelo(tDwd[x],tDwi[x],Ot[x],0.5,r,b)
+        
+        Ox = np.append(Ox,model[0])
+        Oy = np.append(Oy,model[1])
+        Ot = np.append(Ot,model[2])
 
+        #salida de ejecucion
+    return tDwd,tDwi
+
+#generar Trayectoria deseada en base a señales establecidas
+def Vehiculo(tDwi,tDwd):
+    global r,b   
+
+    #Variables necesarias para modelo
+    IxV = np.array([0.1])
+    IyV = np.array([0.1])
+    ItV = np.array([0.1])
+
+    DxV = np.array([0.1])
+    DyV = np.array([0.1])
+    DtV = np.array([0.1])
+    
+    #posicion inicial
+    IyV[0] = 0
+    IxV[0] = 0
+
+    DyV[0] = 0
+    DxV[0] = 0
+
+    #orientacion inicial
+    ItV[0] = 90*(np.pi/180)
+
+
+    #salidas del modelo integradas
+    for x in range(tDwd.__len__()):
+
+        resModel = fn.modelo(tDwd[x],tDwi[x],ItV[x],0.5,r,b)
+        IxV = np.append(IxV,[resModel[0]+IxV[x-1]])
+        IyV = np.append(IyV,[resModel[1]+IyV[x-1]])
+        ItV = np.append(ItV,[resModel[2]+ItV[x-1]])
+
+        DxV = np.append(DxV,[resModel[0]])
+        DyV = np.append(DyV,[resModel[1]])
+        DtV = np.append(DtV,[resModel[2]])
+    return IxV,IyV,ItV,DxV,DyV,DtV
 
 def init():
     global theta,xk,yk,theta_k,patch,tmI,wIs,tmD,wDs,lineTra,direction
@@ -145,12 +184,8 @@ def init():
 
 
 
-def animate(index):
+def animate(index,tI,tD,wI,wD,tDwi,tDwd,IxV,IyV):
     global patch,lineTra,direction
-    x,y,t,Dx,Dy,Dt =TrajectoryPoints()
-    tI,wI,tD,wD = MotorSignalTrayectoria()
-    tIwd,tIwi,tDwd,tDwi = Tracking()
-
     #ajuste de escala mIza - mDer
     #mIzq.set_data(tmI[0:index],wIs[0:index]*r)
     #mDer.set_data(tmD[0:index],wDs[0:index]*r)
@@ -162,33 +197,20 @@ def animate(index):
     #velocidades angulares Seguimiento
     mIzqS.set_data(tI[0:index],tDwi[0:index]) 
     mDerS.set_data(tD[0:index],tDwd[0:index])
-
-    #objetener angulo con velocidades calculadas
-    #PreV = fn.pre_proceso(wDV[index-1],wIV[index-1],r,b)        
-    #thetaV = np.append(thetaV,[PreV[2]])
-
-    #Gk = np.matrix([[xkV[index-1]],[ykV[index-1]],[thetaV[index-1]]])
-
-    #ModeloPOS = fn.modelo(xkV[index-1],ykV[index-1],thetaV[index-1],wDV[index],wIV[index],theta_kV[index],0.5,r,b)
-
-    #realimentar variables de vehiculos
-    #xkV = np.append(xkV,[ModeloPOS[0]])
-    #ykV = np.append(ykV,[ModeloPOS[1]])
-    #theta_kV = np.append(theta_kV,[ModeloPOS[2]])
-    
+   
 
     #trayectoria a seguir
-    #Track.set_data(xkV[0:index],ykV[0:index])
+    Track.set_data(IxV[0:index],IyV[0:index])
 
     #Animacion de seguimiento
-    #patch.center = (x[index], y[index])
-    #direction = plt.Arrow(x[index], y[index],(b*2)*math.cos(t[index]),(b*2)*math.sin(t[index]), width = 10)
-    #ax05.add_patch(direction)
+    patch.center = (x[index], y[index])
+    direction = plt.Arrow(x[index], y[index],(b*2)*math.cos(t[index]),(b*2)*math.sin(t[index]), width = 10)
+    ax05.add_patch(direction)
     return patch,mIzq,mDer,Tracyec,direction,mIzqS,mDerS,Track
 
 if __name__ == "__main__":    
     
-    fig = plt.figure(num = 0, figsize = (8, 30))#, dpi = 100)
+    fig = plt.figure(num = 0, figsize = (10, 30))#, dpi = 100)
     fig.suptitle("Seguimiento de Trayectoria", fontsize=12)
     ax01 = subplot2grid((3, 2), (0, 0))
     ax02 = subplot2grid((3, 2), (0, 1))
@@ -209,14 +231,14 @@ if __name__ == "__main__":
     ax02.set_ylim(0,15)
     ax03.set_ylim(0,15)
     ax04.set_ylim(0,15)
-    ax05.set_ylim(-200,200)
+    ax05.set_ylim(-400,400)
 
     ###########set y-limits################
-    ax01.set_xlim(0,8)
-    ax02.set_xlim(0,8)
-    ax03.set_xlim(0,8)
-    ax04.set_xlim(0,8)
-    ax05.set_xlim(-200,200)
+    ax01.set_xlim(0,10)
+    ax02.set_xlim(0,10)
+    ax03.set_xlim(0,10)
+    ax04.set_xlim(0,10)
+    ax05.set_xlim(-200,500)
 
     ##################Grid################
     ax01.grid(True)
@@ -227,7 +249,9 @@ if __name__ == "__main__":
 
     #Generar Trayectoria con señales determinadas
     tI,wI,tD,wD = MotorSignalTrayectoria()
-    x,y,t,Dx,Dy,Dt = TrajectoryPoints()
+    x,y,t,Dx,Dy,Dt =TrajectoryPoints(wI,wD)
+    tDwd,tDwi = Tracking(Dx,Dy)
+    IxV,IyV,ItV,DxV,DyV,DtV = Vehiculo(tDwd,tDwi)
 
     #dibujar vehiculo
     patch = plt.Circle((5, -5), 19.5, fc='y')
@@ -241,14 +265,14 @@ if __name__ == "__main__":
     mDerS, = ax04.plot([], [], lw=2)
 
     #inicia grafica de trayectoria
-    Tracyec, = ax05.plot(x, y, lw=2)
+    Tracyec, = ax05.plot(x, y, lw=1)
 
     #marca de seguimiento
     Track, = ax05.plot([], [], lw=1)
     #mIzq, = ax01.plot(tI,wI)
 
     #ejecucion de modelo
-    anim = animation.FuncAnimation(fig, animate,init_func=init,frames=100,interval=100,blit=True)
+    anim = animation.FuncAnimation(fig, animate,init_func=init,fargs=[tI,tD,wI,wD,tDwi,tDwd,IxV,IyV,],frames=1000,interval=10,blit=True)
     
     plt.show()
         

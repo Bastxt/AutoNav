@@ -92,7 +92,7 @@ model.load_weights(model_path, by_name=True)
 
 #Ciclo de ejecucion B
 #cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
-cap = cv2.VideoCapture('v001.mp4')
+cap = cv2.VideoCapture('Mapeo2.mp4')
 #camera = cv2.VideoCapture("v001.mpexit()4")
 if not cap.isOpened():
     print("Cannot open camera")
