@@ -5,6 +5,7 @@ import random
 import colorsys
 import cv2
 import imutils
+import math
 
 from mrcnn.config import Config
 from mrcnn import model as modellib
@@ -17,6 +18,7 @@ model_filename = "mask_rcnn_object_0020.h5"
 class_names = ['BG','root']
 #class_names = ['BG','Floor']
 min_confidence = 0.6
+disArr=[]
 
 # Metodo de entrada
 #camera = cv2.VideoCapture(0)
@@ -222,16 +224,71 @@ while True:
 
             # Agregar Marca de centroide
             cv2.circle(frame_obj, (cX, cY), 5, (139,0,0), -1)
-            cv2.putText(frame_obj, "centroid", (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+            #cv2.putText(frame_obj, "centroid", (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+            cv2.putText(frame_obj, str((cX, cY)), (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
             #cv2.drawContours(frame_obj, [c], -1, (0, 255, 255), 2)
              #recorrido de matriz pxp
+             
             for y in range(len(c)):
                 ext = tuple(c[y][0])
                 #print('tamaño: ',len(c[y,:]))
                 if ext[1]<cY:               
-                    cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                    cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) #Trazar posible linea entre el punto del controno y el centroide
+                    #cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                    #cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) #Trazar posible linea entre el punto del controno y el centroide
+                    #print( 'Eje x : ',ext[0],'Eje y : ',ext[1], cX,cY)
+                    #Pitagoras para sacar magnitud y distancia entre 2 puntos
+                    #d(A,B)= sqrt((x2-x1)^2 +(y2-y1)^2)                    
+                    dis=round(math.sqrt(pow(((ext[1])-(cY)),2)+pow(((ext[0])-(cX)),2)))
+                    #print(dis)
+                    disArr.append(dis)
+                    
+            disArr.sort(reverse=True)
+            #print(disArr)
+            countIma=0   
+            countDis=0
+            codis=0
+            disant=0        
+            for y in range(len(c)):
+                print('------Begin-----')
+                print(range(len(c)))                                
+                ext = tuple(c[y][0])
+                #countDis=0                
+                for t in range(len(disArr)):
+                    #if  count == 10 or count == 50 or count == 100 or count == 150 or count == 200 or count == 280 or count == 300 or count == 350 or count == 400 or count == 415 or count == 420:
+                    if ext[1]<cY:
+                        if countDis ==0: 
+                            countDis+=1
+                            vectorx=pow((ext[0]-cX),2)
+                            vectory=pow((ext[1]-cY),2)                                     
+                            punto=round(math.sqrt(vectorx+vectory))
+                            disant=punto
+                            codis+=1
+                            print(punto,'count 0')
+                            cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                            cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)                                       
+                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
+                            break
+                        else:
+                            if codis < 6:
+                                vectorx=pow((ext[0]-cX),2)
+                                vectory=pow((ext[1]-cY),2)                                                                  
+                                punto=round(math.sqrt(vectorx+vectory))
+                                disVal=disant-70
+                                if disVal<= punto:
+                                    print(punto,'codis : ',codis)
+                                    cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                                    #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                                    cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                                    #cv2.putText(frame_obj, str(punto), ext, cv2.FONT_HERSHEY_SIMPLEX, fontScale,color, thickness, cv2.LINE_AA, True)                                                                                               
+                                    cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
+                                    codis+=1 
+                                    break
+                     
+                countIma+=1                   
+                print('------End-----',countIma)
 
+            #print('Contador---------------',count)
             # depurar binarizacion
             #cv2.imshow('frame', thresh)   
             
