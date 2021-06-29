@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Creacion de entorno
+    $ conda create -n AutoNav anaconda python=3.7.7
+    $ conda activate AutoNav
+    $ conda install tensorflow-gpu==2.1.0 cudatoolkit=10.1
+    $ pip install tensorflow==2.1.0
+    $ pip install keras
+    $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
+    
+## Instalar MaskRCNN (https://github.com/matterport)
+    $ python setup.py install
 
-You can use the [editor on GitHub](https://github.com/Bastxt/Slam-Car/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Uso de pycocotools
+    $ pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Repositorios Base
+    Matterport, Inc
+    https://github.com/matterport
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Bastxt/Slam-Car/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    DavidReveloLuna
+    https://github.com/DavidReveloLuna/MaskRCNN_Video

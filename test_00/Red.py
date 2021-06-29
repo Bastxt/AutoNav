@@ -11,10 +11,12 @@ from mrcnn.config import Config
 from mrcnn import model as modellib
 
 #modelo pre-entrenado
-model_filename = "mask_rcnn_red_0080.h5"
+#model_filename = "mask_rcnn_red_0080.h5"
+model_filename = "mask_rcnn_object_0020.h5"
+
 #clases correspondientes a modelo
-#class_names = ['BG','root']
-class_names = ['BG','Floor']
+class_names = ['BG','root']
+#class_names = ['BG','Floor']
 min_confidence = 0.6
 disArr=[]
 
@@ -32,7 +34,7 @@ class SetNetConfig(Config):
 
     # Train on 1 GPU and 1 image per GPU. Batch size is 1 (GPUs * images/GPU).
     GPU_COUNT = 1
-    IMAGES_PER_GPU = 2
+    IMAGES_PER_GPU = 1
 
     # Number of classes (including background)
     NUM_CLASSES = 1 + 1  # background + 1 (casco)
@@ -92,7 +94,7 @@ model.load_weights(model_path, by_name=True)
 
 #Ciclo de ejecucion B
 #cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
-cap = cv2.VideoCapture('Mapeo2.mp4')
+cap = cv2.VideoCapture('v001.mp4')
 #camera = cv2.VideoCapture("v001.mpexit()4")
 if not cap.isOpened():
     print("Cannot open camera")
@@ -141,8 +143,8 @@ while True:
         score = scores[i] if scores is not None else None   # Separar Score
         label = class_names[class_id]                       # Separar nombre de clase
 
-        #if label =='root':
-        if label =='Floor':
+        if label =='root':
+        #if label =='Floor':
             # Identificar Label
             #print ( label,'Floor', class_id, 'class_ids')
 
