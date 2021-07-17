@@ -52,7 +52,7 @@
 ## Implementacion
 - [x] Estructura Fisica
 - [x] Circuitos y etapas de poder
-- [ ] Red Neuronal
+- [x] Red Neuronal
 - [ ] Modelo e interfaz en Python
 - [ ] Control y seleccion de trayectoria
 
