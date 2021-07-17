@@ -11,12 +11,10 @@ from mrcnn.config import Config
 from mrcnn import model as modellib
 
 #modelo pre-entrenado
-#model_filename = "mask_rcnn_red_0080.h5"
-model_filename = "mask_rcnn_object_0020.h5"
-
+model_filename = "mask_rcnn_red_0080.h5"
 #clases correspondientes a modelo
-class_names = ['BG','root']
-#class_names = ['BG','Floor']
+#class_names = ['BG','root']
+class_names = ['BG','Floor']
 min_confidence = 0.6
 disArr=[]
 
@@ -34,7 +32,7 @@ class SetNetConfig(Config):
 
     # Train on 1 GPU and 1 image per GPU. Batch size is 1 (GPUs * images/GPU).
     GPU_COUNT = 1
-    IMAGES_PER_GPU = 1
+    IMAGES_PER_GPU = 2
 
     # Number of classes (including background)
     NUM_CLASSES = 1 + 1  # background + 1 (casco)
@@ -143,8 +141,8 @@ while True:
         score = scores[i] if scores is not None else None   # Separar Score
         label = class_names[class_id]                       # Separar nombre de clase
 
-        if label =='root':
-        #if label =='Floor':
+        #if label =='root':
+        if label =='Floor':
             # Identificar Label
             #print ( label,'Floor', class_id, 'class_ids')
 
