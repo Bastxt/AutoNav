@@ -117,7 +117,7 @@ def Tracking(Dx,Dy):
     for x in range(Dx.__len__()):
         #modelo inverso para seguimiento de trayectoria
         #obtenemos velocidades angulares mediante cinemcatica inversa
-        modelInv = fn.modeloInv(Dx[x]-Ox[x],Dy[x]-Oy[x],Dt[x]-Ot[x]s,0.5,r,b)
+        modelInv = fn.modeloInv(Dx[x]-Ox[x],Dy[x]-Oy[x],Dt[x]-Ot[x],0.5,r,b)
 
         tDwd = np.append(tDwd,[modelInv[0]])
         tDwi = np.append(tDwi,[modelInv[1]])   
