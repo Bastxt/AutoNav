@@ -11,7 +11,7 @@ from mrcnn.config import Config
 from mrcnn import model as modellib
 
 #modelo pre-entrenado
-model_filename = "mask_rcnn_red_0080.h5"
+model_filename = "red101_80.h5"
 #clases correspondientes a modelo
 #class_names = ['BG','root']
 class_names = ['BG','Floor']
@@ -49,7 +49,7 @@ class SetNetConfig(Config):
     VALIDATION_STEPS = 5
     
     # Matterport originally used resnet101, but I downsized to fit it on my graphics card
-    BACKBONE = 'resnet50'
+    BACKBONE = 'resnet101'
 
     # To be honest, I haven't taken the time to figure out what these do
     RPN_ANCHOR_SCALES = (8, 16, 32, 64, 128)
@@ -93,6 +93,12 @@ model.load_weights(model_path, by_name=True)
 #Ciclo de ejecucion B
 #cap = cv2.VideoCapture(0) #Selecciond de dispositivo de entrada
 cap = cv2.VideoCapture('Mapeo2.mp4')
+ret, frame = cap.read()
+old_gray= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+lk_params= dict(winSize = (10,10), 
+                maxLevel=2,
+                criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10,0.03))
+primPos=0
 #camera = cv2.VideoCapture("v001.mpexit()4")
 if not cap.isOpened():
     print("Cannot open camera")
@@ -100,7 +106,7 @@ if not cap.isOpened():
 while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
-    
+    old_gray= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # verificacion de lectura de frame, si ret es true (ok)
     if not ret:
         print("Error frame...")
@@ -176,6 +182,7 @@ while True:
 
             #Obtener Centroide
             gray_image = cv2.cvtColor(image.astype(np.uint8), cv2.COLOR_BGR2GRAY)
+            gray_frame= cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
             # convert the grayscale image to binary image
             ret,thresh = cv2.threshold(gray_image.astype(np.uint8),0,255,0)
             
@@ -226,7 +233,7 @@ while True:
             cv2.putText(frame_obj, str((cX, cY)), (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
             #cv2.drawContours(frame_obj, [c], -1, (0, 255, 255), 2)
              #recorrido de matriz pxp
-             
+            disArr=[] 
             for y in range(len(c)):
                 ext = tuple(c[y][0])
                 #print('tamaño: ',len(c[y,:]))
@@ -236,22 +243,114 @@ while True:
                     #print( 'Eje x : ',ext[0],'Eje y : ',ext[1], cX,cY)
                     #Pitagoras para sacar magnitud y distancia entre 2 puntos
                     #d(A,B)= sqrt((x2-x1)^2 +(y2-y1)^2)                    
-                    dis=round(math.sqrt(pow(((ext[1])-(cY)),2)+pow(((ext[0])-(cX)),2)))
+                    dis=[round(math.sqrt(pow(((ext[1])-(cY)),2)+pow(((ext[0])-(cX)),2))),(ext),(cX,cY)]
                     #print(dis)
                     disArr.append(dis)
-                    
+                    dis=[]
             disArr.sort(reverse=True)
-            #print(disArr)
-            countIma=0   
+            #print('IMPRIMI----------------------------------------------------------------',disArr)
+            posDisArr=0
             countDis=0
             codis=0
-            disant=0        
-            for y in range(len(c)):
-                print('------Begin-----')
-                print(range(len(c)))                                
-                ext = tuple(c[y][0])
-                #countDis=0                
-                for t in range(len(disArr)):
+            disArrCorY=[]
+            disArrCorX=[]
+            for t in range(len(disArr)): 
+                centro=disArr[posDisArr][2]
+                posCont=disArr[posDisArr][1]
+                distancia=disArr[posDisArr][0]
+                if countDis ==0:                                                                                              
+                    if posCont[1]< centro[1] :
+                        #print('-CENTRO-',centro,'POSICION',posDisArr)
+                        #print('-CONTORNO-',posCont,'POSICION',posDisArr)    
+                        #print('-PASE EL PRIMER IF 1 POSICION----------------',centro,'centro restado|',(centro[0]-50),'|PUNTO A COMPARAR|',posCont[0],'|centro sumado',(centro[0]+50))
+                        if (posCont[0] < (centro[0]+50)) and (posCont[0] > (centro[0]-50)):
+                            disArrCorY.append(posCont[1])
+                            disArrCorX.append(posCont[0])
+                            ext=(posCont[0],posCont[1])
+                            
+                            if primPos == 0:
+                                old_points=old_points=np.array([[ext[0],ext[1]]],dtype=np.float32)
+                                primerFra= True
+                                dis=distancia
+                                primPos=1
+                            if primPos ==1:    
+                                if dis>distancia:
+                                    if (dis-distancia) > 20:
+                                        old_points=np.array([[ext[0],ext[1]]],dtype=np.float32)
+                                        dis=distancia                                         
+                            
+                            # cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                            # cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                            # cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
+                            ext=()
+                            disAnt=distancia
+                            countDis+=1       
+                            codis+=1                                 
+                else:
+                    if codis < 6:                        
+                        if posCont[1]< centro[1] :
+                            #print('-CENTRO-',centro,'POSICION',posDisArr)
+                            #print('-CONTORNO-',posCont,'POSICION',posDisArr) 
+                            #print('-PASE EL PRIMER IF 2 POSICION----------------',centro,'|centro restado',(centro[0]-50),'|PUNTO A COMPARAR',posCont[0],'|centro sumado',(centro[0]+50))
+                            if (posCont[0] < (centro[0]+50)) and (posCont[0] > (centro[0]-50)):
+                                if (disAnt-distancia) >10:
+                                    # disArrCorY.append(posCont[1])
+                                    # disArrCorX.append(posCont[0])
+                                    # ext=(posCont[0],posCont[1])                                    
+                                    # cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                                    # cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                                    # cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
+                                    
+                                    disAnt=distancia
+                                    codis+=1                       
+                posDisArr+=1
+            disArr=[]
+            #disArrCorY=[disArr[0][1],disArr[1][1],disArr[2][1],disArr[3][1],disArr[4][1],disArr[5][1],disArr[6][1],disArr[7][1],disArr[8][1],disArr[9][1],disArr[10][1],disArr[11][1],disArr[12][1],disArr[13][1],disArr[14][1],disArr[15][1],disArr[16][1],disArr[17][1],disArr[18][1],disArr[19][1],disArr[20][1]]
+            #disArrCorX=[disArr[0][2],disArr[1][2],disArr[2][2],disArr[3][2],disArr[4][2],disArr[5][2],disArr[6][2],disArr[7][2],disArr[8][2],disArr[9][2],disArr[10][2],disArr[11][2],disArr[12][2],disArr[13][2],disArr[14][2],disArr[15][2],disArr[16][2],disArr[17][2],disArr[18][2],disArr[19][2],disArr[20][2]]
+            print('-----------array Y--------',disArrCorY)
+            print('-----------Array X----------',disArrCorX)            
+            disant=0
+            if primerFra is True:                                  
+                new_points, status,error=cv2.calcOpticalFlowPyrLK(old_gray,gray_frame,old_points,None,**lk_params)
+                old_gray=gray_frame.copy()
+                old_points=new_points
+                px,py=new_points.ravel()        
+                cv2.circle(frame_obj, (px,py), 3, (0, 0, 255), -1)
+                cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
+            """for y in range(len(c)):                                        
+                ext = tuple(c[y][0])                           
+                if ext[1]<cY:
+                    #print('------Begin-----')
+                    #print(range(len(c)))        
+                    try:
+                        #print(disArrCorX,'-- valor guardado vs valor corriendo xxxxx--',ext[0])
+                        #print(disArrCorY,'-- valor guardado vs valor corriendo yyyyy--',ext[1])
+                        vectorx=pow((ext[0]-cX),2)
+                        vectory=pow((ext[1]-cY),2)
+                        valArrX=disArrCorX.index(ext[0])
+                        valArrY=disArrCorY.index(ext[1])
+                        #print(valArrX,'----',type(valArrX))
+                        #print(valArrY,'----',type(valArrY))
+                        if valArrY == valArrX:                                                                                        
+                            punto=round(math.sqrt(vectorx+vectory))
+                            disant=punto
+                            print(ext,'ext')                            
+                            print(valArrY,'valArrY')
+                            print(valArrX,'valArrX')
+                            cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                            cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)                                       
+                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)                                                                                   
+                    except Exception as e:
+                        #print('Ha ocurrido un error debido a',e)
+                        var=e
+                    
+                countIma+=1 """                  
+                #print('------End-----',countIma)
+            disArrCorY=[]
+            disArrCorX=[]
+
+            """for t in range(len(disArr)):
                     #if  count == 10 or count == 50 or count == 100 or count == 150 or count == 200 or count == 280 or count == 300 or count == 350 or count == 400 or count == 415 or count == 420:
                     if ext[1]<cY:
                         if countDis ==0: 
@@ -281,10 +380,9 @@ while True:
                                     #cv2.putText(frame_obj, str(punto), ext, cv2.FONT_HERSHEY_SIMPLEX, fontScale,color, thickness, cv2.LINE_AA, True)                                                                                               
                                     cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
                                     codis+=1 
-                                    break
+                                    break"""
                      
-                countIma+=1                   
-                print('------End-----',countIma)
+                
 
             #print('Contador---------------',count)
             # depurar binarizacion
