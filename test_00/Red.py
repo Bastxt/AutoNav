@@ -234,6 +234,7 @@ while True:
             #cv2.drawContours(frame_obj, [c], -1, (0, 255, 255), 2)
              #recorrido de matriz pxp
             disArr=[] 
+            ##la idea con este for (for y in range(len(c)):) es recorrer la imagen por primera vez y sacar un array de las distancias de cada punto del contorno vs el centroide.
             for y in range(len(c)):
                 ext = tuple(c[y][0])
                 #print('tamaño: ',len(c[y,:]))
@@ -242,7 +243,8 @@ while True:
                     #cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) #Trazar posible linea entre el punto del controno y el centroide
                     #print( 'Eje x : ',ext[0],'Eje y : ',ext[1], cX,cY)
                     #Pitagoras para sacar magnitud y distancia entre 2 puntos
-                    #d(A,B)= sqrt((x2-x1)^2 +(y2-y1)^2)                    
+                    #d(A,B)= sqrt((x2-x1)^2 +(y2-y1)^2)         
+                    # En este Array (dis) vamos al almacenar  [distancia desde el centroide al punto del contorno, coordenada (x,y) del punto del contorno, coordenada (x,y) del centro de la imagen recorrida]           
                     dis=[round(math.sqrt(pow(((ext[1])-(cY)),2)+pow(((ext[0])-(cX)),2))),(ext),(cX,cY)]
                     #print(dis)
                     disArr.append(dis)
@@ -254,22 +256,30 @@ while True:
             codis=0
             disArrCorY=[]
             disArrCorX=[]
+            ## Este for se encarga de recorrer el array disArr que tiene las distancias ordenadas de mayor a menor.
             for t in range(len(disArr)): 
                 centro=disArr[posDisArr][2]
                 posCont=disArr[posDisArr][1]
                 distancia=disArr[posDisArr][0]
-                if countDis ==0:                                                                                              
+                ##  Este if se hizo con el fin de almacena rla primera posicion la mas lejana, y en el else se almacena las siguiente 5 teniendo un margen de 10 entre cada una, solamente se almacenan 6 (codis)
+                if countDis ==0: 
+                    ## Aca se esta seleccionando los puntos que esten arriba del centroide con el fin de tener todas las distancias de la parte delantera                                                                                             
                     if posCont[1]< centro[1] :
                         #print('-CENTRO-',centro,'POSICION',posDisArr)
                         #print('-CONTORNO-',posCont,'POSICION',posDisArr)    
                         #print('-PASE EL PRIMER IF 1 POSICION----------------',centro,'centro restado|',(centro[0]-50),'|PUNTO A COMPARAR|',posCont[0],'|centro sumado',(centro[0]+50))
+                        ## En este if se establecio un margen simulando un angulo de 45 grados a cada lado, pero en base a la la resta de cierta cantidad (50) a la coordenada x con el fin de generar el abanico.
                         if (posCont[0] < (centro[0]+50)) and (posCont[0] > (centro[0]-50)):
                             disArrCorY.append(posCont[1])
                             disArrCorX.append(posCont[0])
-                            ext=(posCont[0],posCont[1])                                                        
-                            #cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                            #cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
+                            ##Como en este for no se tiene el tuple del for anterior(for y in range(len(c)):), pero si se tiene la informacion almacenada en dissArr[1] que es el punto del contorno donde se tomo dicha distancia se iguala a ext para poder hacer el punto sobre la mascara
+                            ext=(posCont[0],posCont[1]) 
+                            ##Este se encarga de poner el punto donde va el contorno.                                                       
+                            cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                            #Este se encarga de poner en texto las coordenadas (x,y)del punto del contorno.
+                            cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                            #Este se encarga de trazar la linea desde el centro al punto del contorno escogido
+                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
                             ext=()
                             disAnt=distancia
                             countDis+=1       
