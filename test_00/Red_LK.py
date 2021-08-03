@@ -199,8 +199,6 @@ while True:
             #for x in range(len(c[1,:])):
             #    print('y: ',y, 'x: ',x,'Value: ',thresh[y,x])
 
-
-
             #extA = tuple(c[0,:][0])
             #extB = tuple(c[2,:][0])
             #extC = tuple(c[3,:][0])
@@ -266,10 +264,21 @@ while True:
                         if (posCont[0] < (centro[0]+50)) and (posCont[0] > (centro[0]-50)):
                             disArrCorY.append(posCont[1])
                             disArrCorX.append(posCont[0])
-                            ext=(posCont[0],posCont[1])                                                        
-                            #cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                            #cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
+                            ext=(posCont[0],posCont[1])                            
+                            if primPos == 0:
+                                old_points=np.array([[ext[0],ext[1]]],dtype=np.float32)
+                                primerFra= True
+                                dis=distancia
+                                primPos=1
+                            if primPos ==1:    
+                                if dis>distancia:
+                                    if (dis-distancia) > 20:
+                                        old_points=np.array([[ext[0],ext[1]]],dtype=np.float32)
+                                        dis=distancia                                         
+                            
+                            # cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                            cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
                             ext=()
                             disAnt=distancia
                             countDis+=1       
@@ -282,89 +291,30 @@ while True:
                             #print('-PASE EL PRIMER IF 2 POSICION----------------',centro,'|centro restado',(centro[0]-50),'|PUNTO A COMPARAR',posCont[0],'|centro sumado',(centro[0]+50))
                             if (posCont[0] < (centro[0]+50)) and (posCont[0] > (centro[0]-50)):
                                 if (disAnt-distancia) >10:
-                                    disArrCorY.append(posCont[1])
-                                    disArrCorX.append(posCont[0])
-                                    ext=(posCont[0],posCont[1])                                    
-                                    #cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                                    #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                                    #cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1) 
-                                    
+                                    # disArrCorY.append(posCont[1])
+                                    # disArrCorX.append(posCont[0])
+                                    # ext=(posCont[0],posCont[1])                                    
+                                    # cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
+                                    # cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
+                                    # cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)                                 
                                     disAnt=distancia
                                     codis+=1                       
                 posDisArr+=1
             disArr=[]
-            #disArrCorY=[disArr[0][1],disArr[1][1],disArr[2][1],disArr[3][1],disArr[4][1],disArr[5][1],disArr[6][1],disArr[7][1],disArr[8][1],disArr[9][1],disArr[10][1],disArr[11][1],disArr[12][1],disArr[13][1],disArr[14][1],disArr[15][1],disArr[16][1],disArr[17][1],disArr[18][1],disArr[19][1],disArr[20][1]]
-            #disArrCorX=[disArr[0][2],disArr[1][2],disArr[2][2],disArr[3][2],disArr[4][2],disArr[5][2],disArr[6][2],disArr[7][2],disArr[8][2],disArr[9][2],disArr[10][2],disArr[11][2],disArr[12][2],disArr[13][2],disArr[14][2],disArr[15][2],disArr[16][2],disArr[17][2],disArr[18][2],disArr[19][2],disArr[20][2]]
+            
             print('-----------array Y--------',disArrCorY)
             print('-----------Array X----------',disArrCorX)            
-            disant=0            
-            """for y in range(len(c)):                                        
-                ext = tuple(c[y][0])                           
-                if ext[1]<cY:
-                    #print('------Begin-----')
-                    #print(range(len(c)))        
-                    try:
-                        #print(disArrCorX,'-- valor guardado vs valor corriendo xxxxx--',ext[0])
-                        #print(disArrCorY,'-- valor guardado vs valor corriendo yyyyy--',ext[1])
-                        vectorx=pow((ext[0]-cX),2)
-                        vectory=pow((ext[1]-cY),2)
-                        valArrX=disArrCorX.index(ext[0])
-                        valArrY=disArrCorY.index(ext[1])
-                        #print(valArrX,'----',type(valArrX))
-                        #print(valArrY,'----',type(valArrY))
-                        if valArrY == valArrX:                                                                                        
-                            punto=round(math.sqrt(vectorx+vectory))
-                            disant=punto
-                            print(ext,'ext')                            
-                            print(valArrY,'valArrY')
-                            print(valArrX,'valArrX')
-                            cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                            cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)                                       
-                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)                                                                                   
-                    except Exception as e:
-                        #print('Ha ocurrido un error debido a',e)
-                        var=e
-                    
-                countIma+=1 """                  
+            disant=0
+            if primerFra is True:                                  
+                new_points, status,error=cv2.calcOpticalFlowPyrLK(old_gray,gray_frame,old_points,None,**lk_params)
+                old_gray=gray_frame.copy()
+                old_points=new_points
+                px,py=new_points.ravel()        
+                cv2.circle(frame_obj, (px,py), 3, (0, 0, 255), -1)
+                cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)                            
                 #print('------End-----',countIma)
             disArrCorY=[]
             disArrCorX=[]
-
-            """for t in range(len(disArr)):
-                    #if  count == 10 or count == 50 or count == 100 or count == 150 or count == 200 or count == 280 or count == 300 or count == 350 or count == 400 or count == 415 or count == 420:
-                    if ext[1]<cY:
-                        if countDis ==0: 
-                            countDis+=1
-                            vectorx=pow((ext[0]-cX),2)
-                            vectory=pow((ext[1]-cY),2)                                     
-                            punto=round(math.sqrt(vectorx+vectory))
-                            disant=punto
-                            codis+=1
-                            print(punto,'count 0')
-                            cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                            #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                            cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)                                       
-                            cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
-                            break
-                        else:
-                            if codis < 6:
-                                vectorx=pow((ext[0]-cX),2)
-                                vectory=pow((ext[1]-cY),2)                                                                  
-                                punto=round(math.sqrt(vectorx+vectory))
-                                disVal=disant-70
-                                if disVal<= punto:
-                                    print(punto,'codis : ',codis)
-                                    cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
-                                    #cv2.putText(frame_obj,str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                                    cv2.putText(frame_obj,str(punto)+'--'+str(ext),ext,cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-                                    #cv2.putText(frame_obj, str(punto), ext, cv2.FONT_HERSHEY_SIMPLEX, fontScale,color, thickness, cv2.LINE_AA, True)                                                                                               
-                                    cv2.line(frame_obj, (cX, cY), ext, (255, 0, 0),1)
-                                    codis+=1 
-                                    break"""
-                     
-                
-
             #print('Contador---------------',count)
             # depurar binarizacion
             #cv2.imshow('frame', thresh)   
