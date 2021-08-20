@@ -1,10 +1,10 @@
 import RPi.GPIO as gpio
 import time
 import picamera
-import matplotlib.pyplot as plt
-from matplotlib import animation
-from matplotlib.pylab import *
-from numpy.linalg import norm
+
+import socket
+import sys
+
 
 t_ime=time.time()
 
@@ -213,7 +213,37 @@ while True:
    
                
     e=e+1
+    #print('RPM motor Der:',rpm_mot,'RPM enconder:',rpm_enc,'e:',e,'t:',t)
+    #print('RPM motor Izq:',rpm_motM2,'RPM enconder:',rpm_encM2,'e:',e,'t:',t)
+    
+    # Configuracion de Socket Cliente
+    #  TCP/IP socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Direccion y puerto en escucha
+    server_address = ('192.168.39.142', 10000)
+
+    print('connecting to {} port {}'.format(*server_address))
+    sock.connect(server_address)
+    
+    try:
+        # Send data
+        message = '304,200'
+        print('sending: ',message)
+        message = message.encode()
+        
+        sock.send(message)
+
+        # Look for the response
+        amount_received = 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        amount_expected = len(message)
+    except ValueError:
+        print('closing socket')
+        sock.close()
+
+
+    print(' ')
     time.sleep(0.5)
-    print('RPM motor Der:',rpm_mot,'RPM enconder:',rpm_enc,'e:',e,'t:',t)
+    
 
     

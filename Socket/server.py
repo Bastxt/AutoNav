@@ -5,7 +5,7 @@ import sys
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to the port
-server_address = ('localhost', 10000)
+server_address = ('192.168.39.142', 8080)
 print('starting up on {} port {}'.format(*server_address))
 sock.bind(server_address)
 
@@ -18,10 +18,17 @@ while True:
     connection, client_address = sock.accept()
     try:
         print('connection from', client_address)
-        
-        data = connection.recv(16)
-        print('received {!r}'.format(data))
 
-    finally:
+        # Receive the data in small chunks and retransmit it
+        data = connection.recv(255)
+        message = data.decode()
+
+        print('received',message)
+        if data:
+            print("Robot:",message)
+        else:
+            print('no data from', client_address)
+            break
+    except ValueError:
         # Clean up the connection
         connection.close()
