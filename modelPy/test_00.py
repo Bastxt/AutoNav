@@ -46,11 +46,11 @@ Fx = np.array([0.1])
 def MotorSignalTrayectoria():
     global t
     #señal de velocidad motor derecho
-    wD = signal.lti([9.5], [1.0, 1.0])
+    wD = signal.lti([4.5], [1.0, 1.0])
     tmD, wDs = signal.step(wD,T=t)
 
     #Señal de velocidad motor izquierdo
-    wI = signal.lti([10], [1.0, 1.0])
+    wI = signal.lti([5], [1.0, 1.0])
     tmI, wIs = signal.step(wI,T=t)
     
     return tmI,wIs,tmD,wDs
@@ -97,7 +97,7 @@ def TrajectoryPoints(wI,wD):
 def Tracking(Dx,Dy):
     global r,b    
         
-    #Variables necesarias para modelo
+    #Variables de posicion inicial
     tDwd = np.array([0.1])
     tDwi = np.array([0.1])
 
@@ -112,11 +112,13 @@ def Tracking(Dx,Dy):
     tDwi[0] = 0
     theta[0] = 90*(np.pi/180)
 
-     #Ejecucion de modelo inverso para seguimiento
+     #Ejecucion de metodo de persecucion para seguimiento
     #==============================================================================    
     for x in range(Dx.__len__()):
-        #modelo inverso para seguimiento de trayectoria
-        #obtenemos velocidades angulares mediante cinemcatica inversa
+        
+        #diferencia de desplazamiento entre punto actual y punto objetivo
+        #Delta_x = (Dx[x]-)
+
         modelInv = fn.modeloInv(Dx[x]-Ox[x],Dy[x]-Oy[x],Dt[x]-Ot[x],0.5,r,b)
 
         tDwd = np.append(tDwd,[modelInv[0]])
@@ -200,11 +202,11 @@ def animate(index,tI,tD,wI,wD,tDwi,tDwd,IxV,IyV):
    
 
     #trayectoria a seguir
-    Track.set_data(IxV[0:index],IyV[0:index])
+    Track.set_data(IxV[0:1],IyV[0:1])
 
     #Animacion de seguimiento
     patch.center = (x[index], y[index])
-    direction = plt.Arrow(x[index], y[index],(b*2)*math.cos(t[index]),(b*2)*math.sin(t[index]), width = 10)
+    direction = plt.Arrow(x[index], y[index],(b*2)*math.cos(t[index]),(b*2)*math.sin(t[index]), width = 20)
     ax05.add_patch(direction)
     return patch,mIzq,mDer,Tracyec,direction,mIzqS,mDerS,Track
 
@@ -231,14 +233,14 @@ if __name__ == "__main__":
     ax02.set_ylim(0,15)
     ax03.set_ylim(0,15)
     ax04.set_ylim(0,15)
-    ax05.set_ylim(-400,400)
+    ax05.set_ylim(-210,210)
 
     ###########set y-limits################
     ax01.set_xlim(0,10)
     ax02.set_xlim(0,10)
     ax03.set_xlim(0,10)
     ax04.set_xlim(0,10)
-    ax05.set_xlim(-200,500)
+    ax05.set_xlim(-500,400)
 
     ##################Grid################
     ax01.grid(True)
@@ -256,7 +258,7 @@ if __name__ == "__main__":
     #dibujar vehiculo
     patch = plt.Circle((5, -5), 19.5, fc='y')
     #direccion y orientacion
-    direction = plt.arrow(0, 0, 0,0, width = 10)
+    direction = plt.arrow(0, 0, 0,0, width = 20)
 
     #inician graficas de motores
     mIzq, = ax01.plot([], [], lw=2)

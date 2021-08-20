@@ -7,6 +7,12 @@ import cv2
 import imutils
 import math
 
+import lib.graph as gp
+
+import matplotlib.pyplot as plt
+from matplotlib import animation
+from matplotlib.pylab import *
+
 from mrcnn.config import Config
 from mrcnn import model as modellib
 
@@ -24,6 +30,16 @@ disArr=[]
 #camera = cv2.VideoCapture("Mapeo2.mp4")
 
 
+#conteo de fotogramas
+fps = 0
+#media
+m = np.array([0.1])
+m[0] = 0
+
+#variables de orientacion punto Objetivo
+nFrame = np.array([0.1])
+trackpoint = np.array([0.1])
+###########################################################
 
 #clase de configuracion para modelo de inferencia
 class SetNetConfig(Config):
@@ -100,6 +116,23 @@ lk_params= dict(winSize = (640,480),
                 criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10,0.03))
 primPos=0
 #camera = cv2.VideoCapture("v001.mpexit()4")
+
+#definicion de graficas
+
+fig = plt.figure(num = 0, figsize = (10, 30))#, dpi = 100)
+fig.suptitle("Posicion de punto objetivo vs FPS", fontsize=12)
+ax01 = subplot2grid((1, 1), (0, 0))
+ax01.set_xlim(0,600)
+plt.ion()
+plt.show()
+#ax02 = subplot2grid((3, 2), (0, 1))
+#ax03 = subplot2grid((3, 2), (1, 0))
+#ax04 = subplot2grid((3, 2), (1, 1))
+#ax05 = subplot2grid((3, 2), (2, 0), colspan=2, rowspan=1)
+
+############################################################
+
+
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
@@ -231,7 +264,11 @@ while True:
             cv2.circle(frame_obj, (cX, cY), 5, (139,0,0), -1)
             #cv2.putText(frame_obj, "centroid", (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
             cv2.putText(frame_obj, str((cX, cY)), (cX, cY),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (139,0,0), 1)
-            #cv2.drawContours(frame_obj, [c], -1, (0, 255, 255), 2)
+            #Dibuja el contorno detectado
+            cv2.line(frame_obj, (0, cY), (640, cY), (0, 0, 255),1)
+            cv2.line(frame_obj, (cX+50, 480), (cX+50,0), (0, 0, 255),1)
+            cv2.line(frame_obj, (cX-50, 480), (cX-50,0), (0, 0, 255),1)
+            cv2.drawContours(frame_obj, [c], -1,(169, 35, 180), 2)
              #recorrido de matriz pxp
             disArr=[] 
             ##la idea con este for (for y in range(len(c)):) es recorrer la imagen por primera vez y sacar un array de las distancias de cada punto del contorno vs el centroide.
@@ -274,6 +311,16 @@ while True:
                             disArrCorX.append(posCont[0])
                             ##Como en este for no se tiene el tuple del for anterior(for y in range(len(c)):), pero si se tiene la informacion almacenada en dissArr[1] que es el punto del contorno donde se tomo dicha distancia se iguala a ext para poder hacer el punto sobre la mascara
                             ext=(posCont[0],posCont[1]) 
+                            #salida de posicion seleccionada
+                            #print('Posicion: ',ext)
+                            #gafica de puntos sobre eje ax01
+                            ax01.plot(posCont[0],fps,'bo', lw=2)
+                            trackpoint = np.append(trackpoint,[posCont[0]])
+                            nFrame = np.append(nFrame,[fps])
+                            
+                            m = np.append(m,[sum(trackpoint)/len(trackpoint)])
+                            ax01.plot(m,nFrame,'go', lw=2)
+
                             ##Este se encarga de poner el punto donde va el contorno.                                                       
                             cv2.circle(frame_obj, ext, 3, (0, 0, 255), -1)
                             #Este se encarga de poner en texto las coordenadas (x,y)del punto del contorno.
@@ -284,6 +331,7 @@ while True:
                             disAnt=distancia
                             countDis+=1       
                             codis+=1                                 
+                
                 else:
                     if codis < 6:                        
                         if posCont[1]< centro[1] :
@@ -305,8 +353,9 @@ while True:
             disArr=[]
             #disArrCorY=[disArr[0][1],disArr[1][1],disArr[2][1],disArr[3][1],disArr[4][1],disArr[5][1],disArr[6][1],disArr[7][1],disArr[8][1],disArr[9][1],disArr[10][1],disArr[11][1],disArr[12][1],disArr[13][1],disArr[14][1],disArr[15][1],disArr[16][1],disArr[17][1],disArr[18][1],disArr[19][1],disArr[20][1]]
             #disArrCorX=[disArr[0][2],disArr[1][2],disArr[2][2],disArr[3][2],disArr[4][2],disArr[5][2],disArr[6][2],disArr[7][2],disArr[8][2],disArr[9][2],disArr[10][2],disArr[11][2],disArr[12][2],disArr[13][2],disArr[14][2],disArr[15][2],disArr[16][2],disArr[17][2],disArr[18][2],disArr[19][2],disArr[20][2]]
-            print('-----------array Y--------',disArrCorY)
-            print('-----------Array X----------',disArrCorX)            
+            #
+            #print('-----------Array Y--------',disArrCorY)
+            #print('-----------Array X----------',disArrCorX)            
             disant=0            
             """for y in range(len(c)):                                        
                 ext = tuple(c[y][0])                           
@@ -384,6 +433,10 @@ while True:
         cv2.imshow('frame', frame_obj)
     else:
         cv2.imshow('frame', frame_obj)
+
+    #Graficar Resultados
+    fps+=1
+    ############################################################
     
 
     if cv2.waitKey(1) == ord('q'):
