@@ -2,10 +2,6 @@ import RPi.GPIO as gpio
 import time
 import picamera
 
-import socket
-import sys
-
-
 t_ime=time.time()
 
 gpio.setmode(gpio.BCM)
@@ -108,6 +104,7 @@ def CoA(channel):
     pul_ant=(Pulsos)
     #CountA+=Dir   
     CountA+=1
+    #print('RPM motor Der:',rpm_mot,'RPM enconder:',rpm_enc,'e:',e,'t:',t)
     '''print('--------------Inicio DENTRO DE LA INTERRUPCION',time.time()-t_ime,'---------------')
     print('S_ti:',s_ti,'int1_ti:',in1_time,'ti_pul:',ti_pul,'Vel:',pul_seg,'CoA:',CountA,'CoB',CountB)
     print('Pulsos:',Pulsos,'pul_ant:',pul_ant,'d_pul:',d_pul)
@@ -152,15 +149,16 @@ gpio.add_event_detect(20,gpio.RISING, callback=CoB)
 gpio.add_event_detect(26,gpio.RISING, callback=CoAIQZ)
 
 #def on_off (Entrada):
+Motor1D.start(0)
+Motor1Z.start(0)
+Motor2D.start(0)
+Motor2Z.start(0)
 
-
+M2rigth(21,0)
+M1rigth(20,0)
     
 while True:
     s_ti=time.time()-t_ime 
-    Motor1D.start(0)
-    Motor1Z.start(0)
-    Motor2D.start(0)
-    Motor2Z.start(0)
     #Primer Motor
     Pulsos=CountA+CountB
     d_pul=Pulsos-pul_ant
@@ -178,72 +176,11 @@ while True:
     pul_minM2=pul_segM2*60    
     rpm_encM2= pul_minM2/6     #revoluciones en el encoder p/segundos
     rpm_motM2=rpm_encM2*0.02
-
-    M2rigth(21,0)
-    M1rigth(20,0)
-
-    """
-    if finVideo== 1:
-        #M2rigth(13,0)
-        #M1rigth(14,0)
-        M2rigth(21,0)
-        M1rigth(20,0)
-        picam=picamera.PiCamera()        
-        picam.start_preview()
-        picam.start_recording('video3.h264')
-        print('Empece la grabacion')
-        picam.wait_recording(5)  
-        #M2rigth(10,0)
-        #stop()
-        M2rigth(15,0)
-
-        picam.wait_recording(1)
-        print('Segunda Pausa')
-        #M2rigth(13,0)
-        #stop()
-        M2rigth(22,0)
-        print('Cambie Velocidad del motor otra vez')
-        picam.wait_recording(8)
-        picam.stop_recording()
-        picam.stop_preview()
-        picam.close()
-        stop()
-        finVideo=0
-    """
    
-               
+    print('RPM motor Der:',rpm_mot,'RPM enconder:',rpm_enc,'e:',e,'t:',t)
+    print('RPM motor Izq:',rpm_motM2,'RPM enconder:',rpm_encM2,'e:',e,'t:',t)
+
     e=e+1
-    #print('RPM motor Der:',rpm_mot,'RPM enconder:',rpm_enc,'e:',e,'t:',t)
-    #print('RPM motor Izq:',rpm_motM2,'RPM enconder:',rpm_encM2,'e:',e,'t:',t)
-    
-    # Configuracion de Socket Cliente
-    #  TCP/IP socket
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    # Direccion y puerto en escucha
-    server_address = ('192.168.39.142', 10000)
-
-    print('connecting to {} port {}'.format(*server_address))
-    sock.connect(server_address)
-    
-    try:
-        # Send data
-        message = '304,200'
-        print('sending: ',message)
-        message = message.encode()
-        
-        sock.send(message)
-
-        # Look for the response
-        amount_received = 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-        amount_expected = len(message)
-    except ValueError:
-        print('closing socket')
-        sock.close()
-
-
-    print(' ')
     time.sleep(0.5)
-    
 
     

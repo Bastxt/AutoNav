@@ -46,11 +46,11 @@ Fx = np.array([0.1])
 def MotorSignalTrayectoria():
     global t
     #señal de velocidad motor derecho
-    wD = signal.lti([4.5], [1.0, 1.0])
+    wD = signal.lti([20], [1.0, 1.0])
     tmD, wDs = signal.step(wD,T=t)
 
     #Señal de velocidad motor izquierdo
-    wI = signal.lti([5], [1.0, 1.0])
+    wI = signal.lti([21], [1.0, 1.0])
     tmI, wIs = signal.step(wI,T=t)
     
     return tmI,wIs,tmD,wDs
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     ax02 = subplot2grid((3, 2), (0, 1))
     ax03 = subplot2grid((3, 2), (1, 0))
     ax04 = subplot2grid((3, 2), (1, 1))
-    ax05 = subplot2grid((3, 2), (2, 0), colspan=2, rowspan=1)
+    ax05 = subplot2grid((1, 1), (0, 0),)
 
     ###########Definir titulos################
     ax01.set_title('Motor Izquierdo Trayectoria')
